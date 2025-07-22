@@ -1,0 +1,38 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-0cf5d687d42a47e5.js",
+      "static/chunks/4bd1b696-f1f87c717f1f09c8.js",
+      "static/chunks/684-53450ef53d59f174.js",
+      "static/chunks/main-app-03e44ff4eeed68ac.js",
+      "static/chunks/app/_not-found/page-3ab45ebfd92cd56a.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-0cf5d687d42a47e5.js",
+      "static/chunks/4bd1b696-f1f87c717f1f09c8.js",
+      "static/chunks/684-53450ef53d59f174.js",
+      "static/chunks/main-app-03e44ff4eeed68ac.js",
+      "static/css/b12fac6ed2d11469.css",
+      "static/chunks/259-49a7f9290d99ff26.js",
+      "static/chunks/977-8c1f1afea404bf7b.js",
+      "static/chunks/app/layout-22ffe21608b336c2.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-0cf5d687d42a47e5.js",
+      "static/chunks/4bd1b696-f1f87c717f1f09c8.js",
+      "static/chunks/684-53450ef53d59f174.js",
+      "static/chunks/main-app-03e44ff4eeed68ac.js",
+      "static/chunks/259-49a7f9290d99ff26.js",
+      "static/chunks/977-8c1f1afea404bf7b.js",
+      "static/chunks/app/page-d7079e2b46d0d12e.js"
+    ],
+    "/kvkk/page": [
+      "static/chunks/webpack-0cf5d687d42a47e5.js",
+      "static/chunks/4bd1b696-f1f87c717f1f09c8.js",
+      "static/chunks/684-53450ef53d59f174.js",
+      "static/chunks/main-app-03e44ff4eeed68ac.js",
+      "static/css/d16c915a45ea63fc.css",
+      "static/chunks/app/kvkk/page-67c347cbfe72e406.js"
+    ]
+  }
+}
