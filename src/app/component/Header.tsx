@@ -33,8 +33,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex items-center justify-between p-4 bg-gradient-to-b from-[#08162E] from-8% via-[#08162eb2] to-[#08162E]/0 h-[130px] border-b-1 border-b-[#C9B18B] absolute top-0 z-10 w-[100vw]">
-        <Image src={logo} alt="HebilBlue" width={162} height={108} className="md:w-[162px] md:h-[108px] w-[100px] h-[68px]" />
+      <header className="flex items-center justify-between p-4 bg-gradient-to-b from-[#08162E] from-8% via-[#08162eb2] to-[#08162E]/0  border-b-1 border-b-[#C9B18B] absolute top-0 z-10 w-[100vw]">
+        <Image src={logo} alt="HebilBlue" width={162} height={108} className="md:w-[162px] md:h-[108px] w-[68px] h-[48px]" />
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-end flex-col gap-[12px]">

@@ -46,7 +46,7 @@ export default function Home() {
         <HeroSection>
           <h1 className={textStyles.heroTitle}>{content.hero.title}</h1>
           <p className={textStyles.heroDescription}>{content.hero.description}</p>
-          <p className={textStyles.heroDescription}>{content.hero.description_short}</p>
+          {/* <p className={textStyles.heroDescriptionShort}>{content.hero.description_short}</p> */}
         </HeroSection>
         <Image src={banner} alt="BANNER_HOTEL" className="w-full" />
         <HeroSection id="proje">
