@@ -1,38 +1,21 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-0cf5d687d42a47e5.js",
-      "static/chunks/4bd1b696-f1f87c717f1f09c8.js",
-      "static/chunks/684-53450ef53d59f174.js",
-      "static/chunks/main-app-03e44ff4eeed68ac.js",
-      "static/chunks/app/_not-found/page-3ab45ebfd92cd56a.js"
-    ],
-    "/layout": [
-      "static/chunks/webpack-0cf5d687d42a47e5.js",
-      "static/chunks/4bd1b696-f1f87c717f1f09c8.js",
-      "static/chunks/684-53450ef53d59f174.js",
-      "static/chunks/main-app-03e44ff4eeed68ac.js",
-      "static/css/b12fac6ed2d11469.css",
-      "static/chunks/259-49a7f9290d99ff26.js",
-      "static/chunks/977-8c1f1afea404bf7b.js",
-      "static/chunks/app/layout-22ffe21608b336c2.js"
-    ],
     "/page": [
-      "static/chunks/webpack-0cf5d687d42a47e5.js",
-      "static/chunks/4bd1b696-f1f87c717f1f09c8.js",
-      "static/chunks/684-53450ef53d59f174.js",
-      "static/chunks/main-app-03e44ff4eeed68ac.js",
-      "static/chunks/259-49a7f9290d99ff26.js",
-      "static/chunks/977-8c1f1afea404bf7b.js",
-      "static/chunks/app/page-d7079e2b46d0d12e.js"
-    ],
-    "/kvkk/page": [
-      "static/chunks/webpack-0cf5d687d42a47e5.js",
-      "static/chunks/4bd1b696-f1f87c717f1f09c8.js",
-      "static/chunks/684-53450ef53d59f174.js",
-      "static/chunks/main-app-03e44ff4eeed68ac.js",
-      "static/css/d16c915a45ea63fc.css",
-      "static/chunks/app/kvkk/page-67c347cbfe72e406.js"
+      "static/chunks/node_modules_next_dist_1a6ee436._.js",
+      "static/chunks/src_app_favicon_ico_mjs_8a7a8fdc._.js",
+      "static/chunks/[root-of-the-server]__c3207c73._.css",
+      "static/chunks/node_modules_next_46d16782._.js",
+      "static/chunks/src_app_490ede83._.js",
+      "static/chunks/src_app_layout_tsx_c0237562._.js",
+      "static/chunks/src_app_cff60cae._.js",
+      "static/chunks/src_app_page_tsx_0da29565._.js",
+      "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_fd44f5a4._.js",
+      "static/chunks/node_modules_next_dist_compiled_2ce9398a._.js",
+      "static/chunks/node_modules_next_dist_client_8f19e6fb._.js",
+      "static/chunks/node_modules_next_dist_2ecbf5fa._.js",
+      "static/chunks/node_modules_@swc_helpers_cjs_00636ac3._.js",
+      "static/chunks/_e69f0d32._.js",
+      "static/chunks/_93808211._.js"
     ]
   }
 }
