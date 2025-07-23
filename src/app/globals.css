@@ -9,7 +9,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-white: #fffffd;
-    --font-roboto: "Roboto";
+    --font-roboto: "Roboto", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
