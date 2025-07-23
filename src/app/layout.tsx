@@ -8,6 +8,7 @@ import "./safari-fixes.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -23,6 +24,18 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={`${roboto.className} antialiased`}>
         <Providers>
         <div className="flex flex-col min-h-screen bg-white">
