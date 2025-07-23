@@ -1,0 +1,264 @@
+/* Safari-specific fixes for HebilBlue website */
+
+/* Fix for Safari viewport units */
+@supports (-webkit-touch-callout: none) {
+  /* Fix for 100vh issues on mobile Safari */
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+  
+  /* Fix for 100vw issues */
+  .w-screen {
+    width: 100vw;
+    max-width: 100vw;
+  }
+  
+  /* Fix for Safari flexbox rendering */
+  .flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  .flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+  
+  .flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  /* Fix for Safari grid rendering */
+  .grid {
+    display: -webkit-grid;
+    display: grid;
+  }
+  
+  /* Fix for Safari transform rendering */
+  .transform {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  /* Fix for Safari transition rendering */
+  .transition-all {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .transition-transform {
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Fix for Safari backdrop-filter */
+  .backdrop-blur {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  
+  /* Fix for Safari gradient rendering - only for specific gradient classes */
+  header.bg-gradient-to-b {
+    background-image: -webkit-linear-gradient(to bottom, #08162E 8%, rgba(8, 22, 46, 0.7) 50%, rgba(8, 22, 46, 0) 100%);
+    background-image: linear-gradient(to bottom, #08162E 8%, rgba(8, 22, 46, 0.7) 50%, rgba(8, 22, 46, 0) 100%);
+  }
+  
+
+  
+  /* Fix for Safari border rendering */
+  .border-b-1 {
+    border-bottom-width: 1px;
+    -webkit-border-bottom-width: 1px;
+  }
+  
+  /* Fix for Safari text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Fix for Safari image rendering */
+  img {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  /* Fix for Safari button rendering */
+  button {
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Fix for Safari input rendering */
+  input, textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+  }
+  
+  /* Fix for Safari absolute positioning */
+  .absolute {
+    position: -webkit-absolute;
+    position: absolute;
+  }
+  
+  /* Fix for Safari fixed positioning */
+  .fixed {
+    position: -webkit-fixed;
+    position: fixed;
+  }
+  
+  /* Fix for Safari z-index stacking */
+  .z-10 {
+    z-index: 10;
+    -webkit-z-index: 10;
+  }
+  
+  .z-20 {
+    z-index: 20;
+    -webkit-z-index: 20;
+  }
+  
+  /* Fix for Safari overflow issues */
+  .overflow-hidden {
+    overflow: hidden;
+    -webkit-overflow: hidden;
+  }
+  
+  .overflow-y-auto {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Fix for Safari border-radius */
+  .rounded-\[8px\] {
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+  }
+  
+  /* Fix for Safari box-shadow */
+  .shadow {
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Fix for Safari opacity */
+  .opacity-0 {
+    opacity: 0;
+    -webkit-opacity: 0;
+  }
+  
+  .opacity-40 {
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+  }
+  
+  .opacity-50 {
+    opacity: 0.5;
+    -webkit-opacity: 0.5;
+  }
+  
+  /* Fix for Safari pointer-events */
+  .pointer-events-none {
+    pointer-events: none;
+    -webkit-pointer-events: none;
+  }
+  
+  /* Fix for Safari user-select */
+  .select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Fix for Safari cursor */
+  .cursor-pointer {
+    cursor: pointer;
+    -webkit-cursor: pointer;
+  }
+  
+  /* Fix for Safari touch-action */
+  .touch-none {
+    touch-action: none;
+    -webkit-touch-action: none;
+  }
+  
+  /* Fix for Safari will-change */
+  .will-change-transform {
+    will-change: transform;
+    -webkit-will-change: transform;
+  }
+  
+  /* Fix for Safari backface-visibility */
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  /* Fix for Safari perspective */
+  .perspective {
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+  }
+  
+  /* Fix for Safari transform-style */
+  .preserve-3d {
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+  }
+}
+
+
+
+/* Safari on iOS specific fixes */
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  /* iOS Safari specific fixes */
+  .transform {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  .translate-x-0 {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  
+  .translate-x-full {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  
+  .translate-y-2 {
+    -webkit-transform: translateY(0.5rem);
+    transform: translateY(0.5rem);
+  }
+  
+  .-translate-y-2 {
+    -webkit-transform: translateY(-0.5rem);
+    transform: translateY(-0.5rem);
+  }
+  
+  .rotate-45 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .-rotate-45 {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+} 

@@ -14,8 +14,31 @@ import { CarouselSection, HeroSection, PageLayout } from "./layout/index"
 import { textStyles } from "./styles/typography"
 import { serviceItems, svgFiles } from "./utils"
 
+import slider1_1 from "./assets/slider1_1.png"
+import slider1_2 from "./assets/slider1_2.png"
+import slider1_3 from "./assets/slider1_3.png"
+import slider1_4 from "./assets/slider1_4.png"
+import slider2_1 from "./assets/slider2_1.jpg"
+import slider2_2 from "./assets/slider2_2.jpg"
+import slider2_3 from "./assets/slider2_3.jpg"
+import slider2_4 from "./assets/slider2_4.jpg"
+
 export default function Home() {
   // Removed unused screenWidth state
+
+  const slider_images_1 = [
+    <Image src={slider1_1} alt="Slider 1" key="slider1_1" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
+    <Image src={slider1_2} alt="Slider 2" key="slider1_2" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
+    <Image src={slider1_3} alt="Slider 3" key="slider1_3" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
+    <Image src={slider1_4} alt="Slider 4" key="slider1_4" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
+  ]
+
+  const slider_images_2 = [
+    <Image src={slider2_1} alt="Slider 1" key="slider2_1" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
+    <Image src={slider2_2} alt="Slider 2" key="slider2_2" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
+    <Image src={slider2_3} alt="Slider 3" key="slider2_3" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
+    <Image src={slider2_4} alt="Slider 4" key="slider2_4" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
+  ]
 
   // Example photo grid data with wide variant
   const photoGridImages = [
@@ -56,21 +79,18 @@ export default function Home() {
         <div className="px-4 md:px-[96px] bg-white">
           <CarouselSection
             carouselPlacement="right"
-            data={[
-              <Image src={heroImage} alt="verandalar1" key="verandalar1" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
-              <Image src={banner} alt="verandalar2" key="verandalar2" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
-            ]}
+            data={slider_images_1}
           >
             <p className={textStyles.sectionTitle}>{content["verandalar..."]}</p>
             <p className={textStyles.sectionDescription}>{content["verandalar_description"]}</p>
           </CarouselSection>
           <CarouselSection
             carouselPlacement="left"
-            data={[
-              <Image src={modern} alt="verandalar1" key="verandalar1" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
-            ]}
+            data={slider_images_2}
           >
-            <p className={textStyles.sectionTitle}>{content["zamansiz_mimari"]}</p>
+            <p className={textStyles.sectionTitle}>
+              Zamansız Mİmarİ, <br />eşsİz yaşam alanları
+            </p>
           </CarouselSection>
           <div className="p-0 md:p-[24px] pb-[24px] md:pb-[56px]">
             <p className={textStyles.sectionDescription}>
@@ -224,7 +244,7 @@ export default function Home() {
           Hebil Blue Satış Ofisi<br />Türkbükü Mah. Hebil Cad. 156 Sk. Bodrum/MUĞLA
         </p>
         <p className={textStyles.footerText}>
-          +90 252 000 00 00
+          +90 532 635 56 62
         </p>
       </div>
       <div className="bg-[#242953] flex flex-row items-center justify-between w-full h-[40px]">

@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 import { Header } from "./component";
 import "./globals.css";
 import { Providers } from "./providers";
+import "./safari-fixes.css";
 
 const roboto = Roboto({
   subsets: ["latin"],

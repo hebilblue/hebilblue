@@ -19,10 +19,109 @@
   }
 }
 
+/* Safari-specific fixes */
+@supports (-webkit-touch-callout: none) {
+
+  /* Fix for Safari viewport height issues */
+  .h-screen {
+    height: -webkit-fill-available;
+  }
+
+  /* Fix for Safari flexbox issues */
+  .flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  /* Fix for Safari transform rendering */
+  .transform {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  /* Fix for Safari backdrop-filter */
+  .backdrop-blur {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+
+
+
+  /* Fix for Safari border rendering */
+  .border-b-1 {
+    border-bottom-width: 1px;
+    -webkit-border-bottom-width: 1px;
+  }
+
+  /* Fix for Safari text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Fix for Safari image rendering */
+  img {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  /* Fix for Safari transition issues */
+  .transition-all {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  /* Fix for Safari absolute positioning */
+  .absolute {
+    position: -webkit-absolute;
+    position: absolute;
+  }
+
+  /* Fix for Safari fixed positioning */
+  .fixed {
+    position: -webkit-fixed;
+    position: fixed;
+  }
+
+  /* Fix for Safari z-index stacking */
+  .z-10 {
+    z-index: 10;
+    -webkit-z-index: 10;
+  }
+
+  .z-20 {
+    z-index: 20;
+    -webkit-z-index: 20;
+  }
+
+  /* Fix for Safari overflow issues */
+  .overflow-hidden {
+    overflow: hidden;
+    -webkit-overflow: hidden;
+  }
+
+  /* Fix for Safari border-radius */
+  .rounded-\[8px\] {
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+  }
+
+  /* Fix for Safari box-shadow */
+  .shadow {
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+}
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  /* Safari-specific body fixes */
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 /* Custom animations for coming soon page */
@@ -44,14 +143,35 @@ body {
   }
 }
 
+/* Safari-specific animation fixes */
+@-webkit-keyframes blob {
+  0% {
+    -webkit-transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    -webkit-transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    -webkit-transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px) scale(1);
+  }
+}
 .animate-blob {
   animation: blob 7s infinite;
+  -webkit-animation: blob 7s infinite;
 }
 
 .animation-delay-2000 {
   animation-delay: 2s;
+  -webkit-animation-delay: 2s;
 }
 
 .animation-delay-4000 {
   animation-delay: 4s;
+  -webkit-animation-delay: 4s;
 }

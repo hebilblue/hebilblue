@@ -19,7 +19,7 @@ export default function Carousel({ slides }: CarouselProps) {
   }
 
   return (
-    <div className="flex relative w-full">
+    <div className="flex relative w-fit" style={{ WebkitTransform: 'translateZ(0)' }}>
         {slides.map((slide, index) => (
           <div key={index} className={`w-full ${activeSlide === index ? "block" : "hidden"}`}>
             {slide}
