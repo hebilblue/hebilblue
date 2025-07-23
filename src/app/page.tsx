@@ -6,9 +6,9 @@ import heroImage from "./assets/hebilblue-hero-bg.png"
 import kusbakisi from "./assets/kusbakisi.png"
 import kusbakisi2 from "./assets/kusbakisi_2.png"
 import kusbakisi3 from "./assets/kusbakisi_3.png"
-import map from "./assets/map.png"
 import modern from "./assets/window-banner.png"
 import { PhotoGrid } from "./component"
+import { MapComponent } from "./component/map"
 import content from "./content.json"
 import { CarouselSection, HeroSection, PageLayout } from "./layout/index"
 import { textStyles } from "./styles/typography"
@@ -46,6 +46,7 @@ export default function Home() {
         <HeroSection>
           <h1 className={textStyles.heroTitle}>{content.hero.title}</h1>
           <p className={textStyles.heroDescription}>{content.hero.description}</p>
+          <p className={textStyles.heroDescription}>{content.hero.description_short}</p>
         </HeroSection>
         <Image src={banner} alt="BANNER_HOTEL" className="w-full" />
         <HeroSection id="proje">
@@ -189,7 +190,7 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-white flex flex-row gap-[8px] items-center justify-between w-full" id="iletisim">
-        <Image src={map} alt="map" className="w-full h-[300px] md:h-[400px] object-cover" />
+        <MapComponent />
       </div>
       <div className="flex flex-col md:flex-row items-center justify-between w-full bg-[#242953]">
         <div className="relative w-full md:w-[50%] h-[300px] md:h-[400px] bg-[#242953]">

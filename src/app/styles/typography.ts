@@ -7,7 +7,9 @@ export const typography = {
     title:
       'text-[#08162E] font-roboto font-light text-[14px] sm:text-[28px] md:text-[32px] lg:text-[36px] uppercase text-center leading-[12px] md:leading-[18px]',
     description:
-      'text-[#08162E] font-roboto font-light text-[12px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-center max-w-10/12 mx-auto leading-[14px] md:leading-[24px] md:mt-4',
+      'text-[#08162E] font-roboto font-light text-[12px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-center max-w-10/12 mx-auto leading-[14px] md:leading-[24px] md:mt-4 hidden md:block',
+    description_short:
+      'text-[#08162E] font-roboto font-light text-[12px] sm:text-[15px] md:text-[16px] lg:text-[18px] text-center max-w-10/12 mx-auto leading-[14px] md:leading-[24px] md:mt-4 block md:hidden',
   },
 
   // Section headings

@@ -5,6 +5,7 @@ import { useState } from "react";
 import logo from "../assets/logo.png";
 import facebook from "../assets/svg/facebook.svg";
 import folder from "../assets/svg/folder.svg";
+import instagram from "../assets/svg/instagram.svg";
 import pin from "../assets/svg/location-pin.svg";
 import message from "../assets/svg/message.svg";
 import { typography } from "../styles/typography";
@@ -50,7 +51,12 @@ const Header = () => {
               <Image src={folder} alt="folder" width={17} height={17} />
               <p className={`${typography.body.small} text-white uppercase`}>proje kataloğu</p>
             </Link>
-            <Image src={facebook} alt="facebook" width={17} height={17} className="text-white" />
+            <Link href="https://www.facebook.com/share/1712nP8mXi/?mibextid=wwXIfr">
+              <Image src={facebook} alt="facebook" width={36} height={36} className="text-white" />
+            </Link>
+            <Link href="https://www.instagram.com/hebilblue?igsh=OGl3ZzNwd3dsbHdm" >
+              <Image src={instagram} alt="instagram" width={36} height={36} className="text-white" />
+            </Link>
           </div>
           <div className="flex flex-row items-center">
             {pages.map((page, index) => (

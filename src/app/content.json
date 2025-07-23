@@ -1,23 +1,25 @@
 {
-    "hero": {
-        "title": "Ege Esintileriyle Yeniden Doğuş",
-        "description": "Bodrum’un mavi bayraklı Hebil Koyu’nda, denize adım mesafede; doğanın tüm renklerini içine alan yeni bir yaşam deneyimi. Her biri özel havuzlu 80 modern yapıdan oluşan bu seçkin proje, Ege’nin maviliğine hâkim konumu, panoramik deniz manzarası ve özel iskelesiyle benzersiz bir yaşam sunuyor. Zeytin ağaçları ve çam ormanlarıyla çevrili Hebil Koyu, Cennet Koy’un berraklığına komşu konumuyla ayrıcalıklı bir yaşam alanı sunarken, Türkbükü’nün sosyal yaşamına yakın, kalabalıktan ise uzak bir huzur vadediyor. Hebil Blue, dört mevsim Bodrum’u yaşamak ve hayatı yeniden tanımlamak isteyenler için tasarlandı."
-    },
-    "banner": {
-        "title": "hebil blue hotel",
-        "description": "Sessizlik, Zarafet ve Dünya Standartlarında Bir Yaşam Deneyimi Hebil Blue’nun benzersiz doğası ve mimarisi, çok yakında dünya çapında tanınan seçkin bir markanın imzasıyla taçlanıyor. Kusursuz hizmet anlayışı, sofistike tasarımı ve zamansız lüksüyle öne çıkan bu marka; Bodrum’un en özel koyunda, ayrıcalıklı misafirler için tasarlanmış prestijli bir destinasyon sunacak. Bu seçkin yaşam deneyimi için geri sayım başladı."
-    },
-    "banner_2": {
-        "title": "hebil blue hotel",
-        "description": "Sessizlik, Zarafet ve Dünya Standartlarında Bir Yaşam Deneyimi Hebil Blue’nun benzersiz doğası ve mimarisi, çok yakında dünya çapında tanınan seçkin bir markanın imzasıyla taçlanıyor. Kusursuz hizmet anlayışı, sofistike tasarımı ve zamansız lüksüyle öne çıkan bu marka; Bodrum’un en özel koyunda, ayrıcalıklı misafirler için tasarlanmış prestijli bir destinasyon sunacak. Bu seçkin yaşam deneyimi için geri sayım başladı."
-    },
-    "verandalar...": "VERANDALAR, ATEŞ ÇUKURLARI VE İÇ BAHÇELER...",
-    "verandalar_description": "Geniş verandalar, ateş çukurları ve iç bahçeler, her anı değerli kılmak için tasarlandı. Her köşe, size unutulmaz anılar biriktirmeniz için ilham veriyor.",
-    "zamansiz_mimari": "Zamansız Mİmarİ, eşsİz yaşam alanları",
-    "zamansiz_mimari_description": "Hebil Blue’da her detay, zarafet ve konforu en yüksek düzeyde yaşatmak üzere kurgulandı. Panoramik manzaraya açılan geniş verandalar, ateş çukurlarıyla zenginleştirilmiş özel oturma alanları ve peyzajla bütünleşen iç bahçeler; her anınıza değer, her bakışınıza estetik katıyor. Doğayla iç içe bu benzersiz yaşam alanları; modern mimarinin yalın çizgileri ve üst segment malzeme seçimiyle buluşarak, ayrıcalığın yeni tanımını sunuyor. 80 modern yapının her biri; kendine ait havuz, özel bahçe ve günün her saatinde büyüleyici bir atmosfer yaratan yaşam alanlarıyla donatıldı.",
-    "kullanim_alani_description_1": "Hebil Blue, farklı yaşam tercihlerine uygun olarak tasarlandı. 42 adet A tipi; 6+1 ve 5+2 seçenekleriyle daha geniş ve çok yönlü kullanım alanları sunarken, 38 adet B tipi ise 5+1 planıyla konforu ve işlevselliği bir arada sunuyor. Her yapı, özel bahçesi, havuzu ve geniş verandaların yanı sıra; incelikli detaylar ve yüksek kaliteli malzemelerle donatıldı.",
-    "kullanim_alani_description_2": "A tipinde her biri 2 kapalı ve 1 açık olmak üzere toplam 3 araçlık otopark alanı bulunurken, B tipinde ise 1 kapalı ve 1 açık otopark alanı yer alıyor.",
-    "kullanim_alani_description_3": "Bu sayede yalnızca görsel olarak değil, fonksiyonel açıdan da mükemmel bir yaşam alanı sunuluyor.",
-    "doga_description_1": "Hebil Blue, sadece bir yaşam alanı değil; her detayı düşünülmüş, dört mevsim keyif sunan özel bir yaşam deneyimi sunar. Gününüze dingin bir yürüyüşle başlayabilir, özel iskelinizde denizin keyfini çıkarabilir, ardından spa merkezinde rahatlayabilirsiniz.",
-    "doga_description_2": "Restoran & Snack Bar. Fitness & Spa Alanları, Yürüyüş Parkurları & Çocuk Oyun Alanları, Elektrikli Araç Şarj İstasyonları, Kapalı ve Açık Otopark, Buggy Servis Hizmeti, Bahçıvanlık & Temizlik Hizmetleri, Deniz Suyu Desalinasyon Sistemi, Otel Konforunda Hizmet, 7/24 Güvenlik."
+  "hero": {
+    "title": "Ege Esintileriyle Yeniden Doğuş",
+    "description": "Bodrum’un mavi bayraklı Hebil Koyu’nda, denize adım mesafede; doğanın tüm renklerini içine alan yeni bir yaşam deneyimi. Her biri özel havuzlu 80 modern yapıdan oluşan bu seçkin proje, Ege’nin maviliğine hâkim konumu, panoramik deniz manzarası ve özel iskelesiyle benzersiz bir yaşam sunuyor. Zeytin ağaçları ve çam ormanlarıyla çevrili Hebil Koyu, Cennet Koy’un berraklığına komşu konumuyla ayrıcalıklı bir yaşam alanı sunarken, Türkbükü’nün sosyal yaşamına yakın, kalabalıktan ise uzak bir huzur vadediyor. Hebil Blue, dört mevsim Bodrum’u yaşamak ve hayatı yeniden tanımlamak isteyenler için tasarlandı.",
+    "description_short": "Bodrum Hebil Koyu'nda, denize adım mesafede 80 modern yapıdan oluşan seçkin proje. Ege'nin maviliğine hâkim konumu ve özel iskelesiyle benzersiz bir yaşam sunuyor. Doğayla iç içe, sosyal yaşama yakın ama huzurlu bir ortam."
+  },
+  "banner": {
+    "title": "hebil blue hotel",
+    "description": "Bodrum’un mavi bayraklı Hebil Koyu’nda, denize adım mesafede; doğayla iç içe yeni bir yaşam deneyimi.Her biri özel havuzlu 80 modern yapıdan oluşan Hebil Blue, Ege’nin maviliğine hâkim konumu, panoramik manzarası ve özel iskelesiyle benzersiz bir yaşam sunuyor.Zeytin ağaçları ve çam ormanlarıyla çevrili bu özel koy, Cennet Koy’un berraklığına komşu, Türkbükü’nün sosyal yaşamına yakın ve kalabalıktan uzak.Hebil Blue, dört mevsim Bodrum’u yaşamak isteyenler için tasarlandı."
+  },
+  "banner_2": {
+    "title": "hebil blue hotel",
+    "description": "Sessizlik, Zarafet ve Dünya Standartlarında Bir Yaşam Deneyimi Hebil Blue’nun benzersiz doğası ve mimarisi, çok yakında dünya çapında tanınan seçkin bir markanın imzasıyla taçlanıyor. Kusursuz hizmet anlayışı, sofistike tasarımı ve zamansız lüksüyle öne çıkan bu marka; Bodrum’un en özel koyunda, ayrıcalıklı misafirler için tasarlanmış prestijli bir destinasyon sunacak. Bu seçkin yaşam deneyimi için geri sayım başladı."
+  },
+  "verandalar...": "VERANDALAR, ATEŞ ÇUKURLARI VE İÇ BAHÇELER...",
+  "verandalar_description": "Geniş verandalar, ateş çukurları ve iç bahçeler, her anı değerli kılmak için tasarlandı. Her köşe, size unutulmaz anılar biriktirmeniz için ilham veriyor.",
+  "zamansiz_mimari": "Zamansız Mİmarİ, eşsİz yaşam alanları",
+  "zamansiz_mimari_description": "Hebil Blue’da her detay, zarafet ve konforu en yüksek düzeyde yaşatmak üzere kurgulandı. Panoramik manzaraya açılan geniş verandalar, ateş çukurlarıyla zenginleştirilmiş özel oturma alanları ve peyzajla bütünleşen iç bahçeler; her anınıza değer, her bakışınıza estetik katıyor. Doğayla iç içe bu benzersiz yaşam alanları; modern mimarinin yalın çizgileri ve üst segment malzeme seçimiyle buluşarak, ayrıcalığın yeni tanımını sunuyor. 80 modern yapının her biri; kendine ait havuz, özel bahçe ve günün her saatinde büyüleyici bir atmosfer yaratan yaşam alanlarıyla donatıldı.",
+  "kullanim_alani_description_1": "Hebil Blue, farklı yaşam tercihlerine uygun olarak tasarlandı. ",
+  "kullanim_alani_description_2": "42 adet A tipi; 6+1 ve 5+2 seçenekleriyle daha geniş ve çok yönlü kullanım alanları sunarken,  38 adet B tipi ise 5+1 planıyla konforu ve işlevselliği bir arada sunuyor. Her yapı, özel bahçesi, havuzu ve geniş verandaların yanı sıra; incelikli detaylar ve yüksek kaliteli malzemelerle donatıldı.",
+  "kullanim_alani_description_3": "A tipinde her biri 2 kapalı ve 1 açık olmak üzere toplam 3 araçlık otopark alanı bulunurken,  B tipinde ise 1 kapalı ve 1 açık otopark alanı yer alıyor.",
+  "kullanim_alani_description_4": "Bu sayede yalnızca görsel olarak değil, fonksiyonel açıdan da mükemmel bir yaşam alanı sunuluyor.",
+  "doga_description_1": "Hebil Blue, sadece bir yaşam alanı değil; her detayı düşünülmüş, dört mevsim keyif sunan özel bir yaşam deneyimi sunar. Gününüze dingin bir yürüyüşle başlayabilir, özel iskelinizde denizin keyfini çıkarabilir, ardından spa merkezinde rahatlayabilirsiniz.",
+  "doga_description_2": "Restoran & Snack Bar. Fitness & Spa Alanları, Yürüyüş Parkurları & Çocuk Oyun Alanları, Elektrikli Araç Şarj İstasyonları, Kapalı ve Açık Otopark, Buggy Servis Hizmeti, Bahçıvanlık & Temizlik Hizmetleri, Deniz Suyu Desalinasyon Sistemi, Otel Konforunda Hizmet, 7/24 Güvenlik."
 }
