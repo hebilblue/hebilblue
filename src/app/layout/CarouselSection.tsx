@@ -1,8 +1,8 @@
 import React from 'react'
 import { Carousel } from '../component'
-const CarouselSection = ({ carouselPlacement, data, children }: { carouselPlacement: string, data: React.ReactNode[], children: React.ReactNode }) => {
+const CarouselSection = ({ carouselPlacement, data, children, className }: { carouselPlacement: string, data: React.ReactNode[], children: React.ReactNode, className?: string }) => {
     return (
-        <div className="bg-white min-h-[500px] md:h-[500px] items-center flex flex-col md:flex-row">
+        <div className={`bg-white items-center flex flex-col-reverse md:flex-row py-8 ${className}`}>
             {carouselPlacement === "left" &&
                 <div className="w-full md:w-1/2 h-full flex flex-col justify-center items-center">
                     <Carousel slides={data} />

@@ -1,5 +1,5 @@
-import React from 'react';
 import Image, { StaticImageData } from 'next/image';
+import React from 'react';
 
 interface PhotoGridProps {
   images: {
@@ -7,7 +7,7 @@ interface PhotoGridProps {
     alt: string;
     width?: number;
     height?: number;
-    variant?: 'normal' | 'wide'; // Add variant support
+    variant?: 'normal' | 'wide' | 'youtube'; // Add YouTube variant support
   }[];
   columns?: 2 | 3 | 4 | 5 | 6;
   gap?: string;     
@@ -46,6 +46,15 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({
     }
   };
 
+  const getYouTubeEmbedUrl = (url: string) => {
+    // Extract video ID from YouTube URL
+    const videoId = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/)?.[1];
+    if (videoId) {
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    return url; // Return original URL if no video ID found
+  };
+
   return (
     <div className={`grid ${getGridCols()} gap-${gap} ${className}`} style={{ gridAutoRows: 'minmax(0, 1fr)' }}>
       {images.map((image, index) => (
@@ -58,13 +67,32 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({
           }`}
           onClick={() => onClick?.(index)}
         >
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          {image.variant === 'youtube' ? (
+            <iframe
+              src={getYouTubeEmbedUrl(image.src as string)}
+              className="w-full h-full"
+              allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title={image.alt}
+            />
+          ) : image.variant === 'wide' ? (
+            <iframe
+              src={image.src as string}
+              className="w-full h-full object-cover"
+              title={image.alt}
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            />
+          ) : (
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+          )}
         </div>
       ))}
     </div>

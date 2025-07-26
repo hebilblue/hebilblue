@@ -33,7 +33,7 @@ export const typography = {
   // Statistics and numbers
   stats: {
     large:
-      'text-[#08162E] font-roboto font-bold text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] text-center max-w-10/12 mx-auto',
+      'text-[#08162E] font-roboto font-bold text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] text-center mx-auto',
     medium:
       'text-[#08162E] font-roboto font-bold text-[18px] sm:text-[19px] md:text-[20px] lg:text-[22px] text-center',
   },

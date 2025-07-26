@@ -51,7 +51,7 @@ export default function Home() {
     { src: banner, alt: "Banner Hotel" },
     { src: doga, alt: "Nature" },
     { src: modern, alt: "Modern Architecture", variant: 'wide' as const },
-    { src: kusbakisi, alt: "Bird's Eye View", variant: 'wide' as const },
+    { src: "https://www.youtube.com/embed/tKicQIvFElM", alt: "Hebil Blue Video", variant: 'wide' as const },
   ];
 
   const locations = [
@@ -65,13 +65,13 @@ export default function Home() {
   return (
     <PageLayout>
       <div className="w-full" id="hebilblue">
-        <Image src={heroImage} alt="Hero Image" className="w-full" />
+        <Image src={heroImage} alt="Hero Image" className="w-full h-[300px] md:h-[600px] object-cover" />
         <HeroSection>
           <h1 className={textStyles.heroTitle}>{content.hero.title}</h1>
           <p className={textStyles.heroDescription}>{content.hero.description}</p>
           {/* <p className={textStyles.heroDescriptionShort}>{content.hero.description_short}</p> */}
         </HeroSection>
-        <Image src={banner} alt="BANNER_HOTEL" className="w-full" />
+        <Image src={banner} alt="BANNER_HOTEL" className="w-full h-[300px] md:h-[600px] object-cover" />
         <HeroSection id="proje">
           <h1 className={textStyles.heroTitle}>{content.banner.title}</h1>
           <p className={textStyles.heroDescription}>{content.banner.description}</p>
@@ -80,6 +80,7 @@ export default function Home() {
           <CarouselSection
             carouselPlacement="right"
             data={slider_images_1}
+            className="pt-0 pb-0"
           >
             <p className={textStyles.sectionTitle}>{content["verandalar..."]}</p>
             <p className={textStyles.sectionDescription}>{content["verandalar_description"]}</p>
@@ -87,26 +88,29 @@ export default function Home() {
           <CarouselSection
             carouselPlacement="left"
             data={slider_images_2}
+            className="flex-col gap-2 pb-0 md:pb-8"
           >
             <p className={textStyles.sectionTitle}>
               Zamansız Mİmarİ, <br />eşsİz yaşam alanları
             </p>
           </CarouselSection>
-          <div className="p-0 md:p-[24px] pb-[24px] md:pb-[56px]">
-            <p className={textStyles.sectionDescription}>
-              {content["zamansiz_mimari_description"]}
-            </p>
-          </div>
-          <div className="p-0 md:p-[24px] flex flex-col md:flex-row gap-[8px]" id="vaziyet planı">
-            <p className={textStyles.statsLarge}>
-              MODERN YAPI<br />80 ADET
-            </p>
-            <p className={textStyles.statsLarge}>
-              PROJE ALANI<br />30.000 m2
-            </p>
-            <p className={textStyles.statsLarge}>
-              İSKELE<br />1400 m2
-            </p>
+          <div className="flex flex-col-reverse md:flex-col gap-4 md:gap-0">
+            <div className="p-0 md:p-[24px] pb-[18px] md:pb-[56px]">
+              <p className={textStyles.sectionDescription}>
+                {content["zamansiz_mimari_description"]}
+              </p>
+            </div>
+            <div className="p-0 md:p-[24px] flex flex-wrap flex-row md:flex-row gap-[24px] w-full bg-white" id="vaziyet planı">
+              <p className={textStyles.statsLarge}>
+                MODERN YAPI<br />80 ADET
+              </p>
+              <p className={textStyles.statsLarge}>
+                PROJE ALANI<br />30.000 m2
+              </p>
+              <p className={textStyles.statsLarge}>
+                İSKELE<br />1400 m2
+              </p>
+            </div>
           </div>
           <div className="py-[12px] md:py-[24px] flex flex-col md:flex-row gap-[8px] items-center justify-between w-full">
             <div className="flex flex-col gap-[8px] order-2 md:order-1">
@@ -115,13 +119,7 @@ export default function Home() {
                 UYGUN YAŞAM ALANLARI
               </p>
               <p className={textStyles.sectionDescription}>
-                {content["kullanim_alani_description_1"]}
-              </p>
-              <p className={textStyles.sectionDescription}>
-                {content["kullanim_alani_description_2"]}
-              </p>
-              <p className={textStyles.sectionDescription}>
-                {content["kullanim_alani_description_3"]}
+                {content["kullanim_alani_description_1"]} <strong>{content["kullanim_alani_description_2"]}</strong>{" "}{content["kullanim_alani_description_3"]}
               </p>
             </div>
             <Image src={kusbakisi} alt="kusbakisi" className="w-full my-[16px] md:py-0 md:w-[600px] h-[300px] md:h-[400px] object-cover order-1 md:order-2" />
@@ -180,21 +178,19 @@ export default function Home() {
             onClick={(index) => console.log(`Clicked image ${index}`)}
           />
         </div>
-        <div className="bg-white px-4 md:px-[96px] pb-[48px] flex flex-col md:flex-row gap-[8px] items-center justify-between w-full" id="hotel">
-          <div className="flex flex-col gap-[8px] order-2 md:order-1">
+        <div className="bg-white mt-[-24px] md:mt-0 md:pt-0 px-4 md:px-[96px] pb-[48px] flex flex-col md:flex-row gap-[24px] md:gap-[8px] items-center justify-between w-full" id="hotel">
+          <div className="flex flex-col gap-[16px] md:gap-[8px] order-2 md:order-1">
             <p className={textStyles.sectionTitle}>
-              LOKASYON<br />Hebİl Koyu / Türkbükü
+              <strong>LOKASYON</strong><br />Hebİl Koyu / Türkbükü
             </p>
             <p className={textStyles.sectionDescription}>
               Hem Sakinliğe Yakın, Hem Hayatın İçinde!<br />
-              Doğayla iç içe, huzurlu bir atmosferde yer alırken; Bodrum&apos;un en gözde noktalarına sadece dakikalar mesafedesiniz.<br />
-              Günün dilediğiniz saatinde sahile inin, Yalıkavak Marina&apos;da alışverişe çıkın… <br />
-              Hepsi sadece bir yol kadar yakın!
+              Doğayla iç içe, huzurlu bir atmosferde yer alırken; Bodrum&apos;un en gözde noktalarına sadece dakikalar mesafedesiniz.<strong> Günün dilediğiniz saatinde sahile inin, Yalıkavak Marina&apos;da alışverişe çıkın… </strong><br />Hepsi sadece bir yol kadar yakın!
             </p>
           </div>
           <Image src={kusbakisi2} alt="kusbakisi2" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover order-1 md:order-2" />
         </div>
-        <div className="bg-white px-4 md:px-[96px] pb-[48px] flex flex-col md:flex-row gap-[8px] items-center justify-between w-full">
+        <div className="bg-white px-8 md:px-[96px] pb-[48px] flex flex-row flex-wrap md:flex-row gap-[32px] md:gap-[8px] items-center justify-around">
           {
             locations.map((location, index) => (
               <div key={index} className="flex flex-col gap-[4px]">
