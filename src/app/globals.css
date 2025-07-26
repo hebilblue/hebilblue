@@ -178,3 +178,55 @@ body {
   animation-delay: 4s;
   -webkit-animation-delay: 4s;
 }
+/* Fade-in animations for logo patterns */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.7s ease-out forwards;
+}
+
+.animate-fade-in-delayed {
+  animation: fadeIn 0.7s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+/* Scroll-triggered animation classes */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-on-scroll-delayed {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out 0.3s, transform 0.7s ease-out 0.3s;
+}
+
+.fade-in-on-scroll-delayed.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -22,22 +22,24 @@ import slider2_1 from "./assets/slider2_1.jpg"
 import slider2_2 from "./assets/slider2_2.jpg"
 import slider2_3 from "./assets/slider2_3.jpg"
 import slider2_4 from "./assets/slider2_4.jpg"
+import ContactForm from "./component/ContactForm/ContactForm"
+import StatItem from "./component/StatItem"
 
 export default function Home() {
   // Removed unused screenWidth state
 
   const slider_images_1 = [
-    <Image src={slider1_1} alt="Slider 1" key="slider1_1" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
-    <Image src={slider1_2} alt="Slider 2" key="slider1_2" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
-    <Image src={slider1_3} alt="Slider 3" key="slider1_3" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
-    <Image src={slider1_4} alt="Slider 4" key="slider1_4" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
+    <Image src={slider1_1} alt="Slider 1" key="slider1_1" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
+    <Image src={slider1_2} alt="Slider 2" key="slider1_2" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
+    <Image src={slider1_3} alt="Slider 3" key="slider1_3" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
+    <Image src={slider1_4} alt="Slider 4" key="slider1_4" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
   ]
 
   const slider_images_2 = [
-    <Image src={slider2_1} alt="Slider 1" key="slider2_1" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
-    <Image src={slider2_2} alt="Slider 2" key="slider2_2" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
-    <Image src={slider2_3} alt="Slider 3" key="slider2_3" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
-    <Image src={slider2_4} alt="Slider 4" key="slider2_4" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover" />,
+    <Image src={slider2_1} alt="Slider 1" key="slider2_1" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
+    <Image src={slider2_2} alt="Slider 2" key="slider2_2" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
+    <Image src={slider2_3} alt="Slider 3" key="slider2_3" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
+    <Image src={slider2_4} alt="Slider 4" key="slider2_4" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
   ]
 
   // Example photo grid data with wide variant
@@ -65,13 +67,21 @@ export default function Home() {
   return (
     <PageLayout>
       <div className="w-full" id="hebilblue">
-        <Image src={heroImage} alt="Hero Image" className="w-full h-[300px] md:h-[600px] object-cover" />
+        <div className="overflow-hidden">
+          <Image
+            src={heroImage}
+            alt="Hero Image"
+            className="w-full h-[300px] md:h-[600px] object-cover transition-transform duration-700 ease-in-out hover:scale-110"
+          />
+        </div>
         <HeroSection>
           <h1 className={textStyles.heroTitle}>{content.hero.title}</h1>
           <p className={textStyles.heroDescription}>{content.hero.description}</p>
           {/* <p className={textStyles.heroDescriptionShort}>{content.hero.description_short}</p> */}
         </HeroSection>
-        <Image src={banner} alt="BANNER_HOTEL" className="w-full h-[300px] md:h-[600px] object-cover" />
+        <div className="overflow-hidden">
+          <Image src={banner} alt="BANNER_HOTEL" className="w-full h-[300px] md:h-[600px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />
+        </div>
         <HeroSection id="proje">
           <h1 className={textStyles.heroTitle}>{content.banner.title}</h1>
           <p className={textStyles.heroDescription}>{content.banner.description}</p>
@@ -101,19 +111,13 @@ export default function Home() {
               </p>
             </div>
             <div className="p-0 md:p-[24px] flex flex-wrap flex-row md:flex-row gap-[24px] w-full bg-white" id="vaziyet planı">
-              <p className={textStyles.statsLarge}>
-                MODERN YAPI<br />80 ADET
-              </p>
-              <p className={textStyles.statsLarge}>
-                PROJE ALANI<br />30.000 m2
-              </p>
-              <p className={textStyles.statsLarge}>
-                İSKELE<br />1400 m2
-              </p>
+              <StatItem title="MODERN YAPI" value={80} suffix="adet" />
+              <StatItem title="PROJE ALANI" value={30000} suffix="m²" />
+              <StatItem title="İSKELE" value={1400} suffix="m²" />
             </div>
           </div>
           <div className="py-[12px] md:py-[24px] flex flex-col md:flex-row gap-[8px] items-center justify-between w-full">
-            <div className="flex flex-col gap-[8px] order-2 md:order-1">
+            <div className="flex flex-col gap-[8px]">
               <p className={textStyles.sectionTitle}>
                 İHTİYAÇLARINIZA<br />
                 UYGUN YAŞAM ALANLARI
@@ -122,10 +126,14 @@ export default function Home() {
                 {content["kullanim_alani_description_1"]} <strong>{content["kullanim_alani_description_2"]}</strong>{" "}{content["kullanim_alani_description_3"]}
               </p>
             </div>
-            <Image src={kusbakisi} alt="kusbakisi" className="w-full my-[16px] md:py-0 md:w-[600px] h-[300px] md:h-[400px] object-cover order-1 md:order-2" />
+            <div className="overflow-hidden w-full min-w-[50%] md:w-[600px] h-[300px] md:h-[400px]">
+              <Image src={kusbakisi} alt="kusbakisi" className="w-full h-full object-cover mb-[16px] md:mb-0 transition-transform duration-700 ease-in-out hover:scale-110" />
+            </div>
           </div>
           <div className="py-[24px] flex flex-col md:flex-row gap-[8px] items-center justify-between w-full">
-            <Image src={doga} alt="doga" className="w-full md:w-[600px] h-[300px] md:h-[400px] object-cover mb-[16px] md:mb-0" />
+            <div className="overflow-hidden w-full min-w-[50%] md:w-[600px] h-[300px] md:h-[400px]">
+              <Image src={doga} alt="doga" className="w-full h-full object-cover mb-[16px] md:mb-0 transition-transform duration-700 ease-in-out hover:scale-110" />
+            </div>
             <div className="flex flex-col gap-[8px]">
               <p className={textStyles.sectionTitle}>
                 Hayatın her anına konfor,<br />
@@ -218,18 +226,9 @@ export default function Home() {
           <p className={`${textStyles.contactDescription} mt-[12px]`}>Hayalinizdeki evi yerinde keşfetmek ve projeye özel ayrıcalıkları öğrenmek için formu doldurun;
             yaşam danışmanlarımız sizi arasın. Dilerseniz satış ofisimizde sizi ağırlamaktan memnuniyet duyarız.</p>
           <div className="flex flex-col md:flex-row gap-[8px] mt-[12px] w-full">
-            <div className="flex flex-col gap-[8px] w-full md:w-[50%]">
-              <input type="text" placeholder="Adınız" className="w-full h-[40px] bg-[#FFFFFF] rounded-[8px] p-[12px] font-roboto font-regular text-[14px] text-[#393C41]" />
-              <input type="text" placeholder="Soyadınız" className="w-full h-[40px] bg-[#FFFFFF] rounded-[8px] p-[12px] font-roboto font-regular text-[14px] text-[#393C41]" />
-              <input type="text" placeholder="E-posta" className="w-full h-[40px] bg-[#FFFFFF] rounded-[8px] p-[12px] font-roboto font-regular text-[14px] text-[#393C41]" />
-            </div>
-            <div className="w-full md:w-[50%]">
-              <textarea placeholder="Mesajınız" className="h-[120px] md:h-full w-full bg-[#FFFFFF] rounded-[8px] p-[12px] font-roboto font-regular text-[14px] text-[#393C41] resize-none" />
-            </div>
+            <ContactForm />
+
           </div>
-          <button className="w-full h-[40px] bg-[#C9B18B] rounded-[8px] p-[12px] mt-[12px] items-center justify-center flex">
-            <p className={textStyles.contactButton}>Gönder</p>
-          </button>
         </div>
       </div>
       <div className="bg-white pb-[48px] flex flex-col gap-[8px] items-center justify-center py-[48px] px-4 md:px-0">
