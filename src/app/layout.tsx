@@ -38,12 +38,10 @@ export default function RootLayout({
       </head>
       <body className={`${roboto.className} antialiased`}>
         <Providers>
-        <div className="flex flex-col min-h-screen bg-white">
-          <main className="flex-1 w-full">
-            <Header />
-            {children}  
+          <Header />
+          <main className="w-full bg-white relative">
+            {children}
           </main>
-        </div>
         </Providers>
       </body>
     </html>
