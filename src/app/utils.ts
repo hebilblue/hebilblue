@@ -3,8 +3,10 @@ import buggyHizmetiSvg from './assets/svg/buggy-hizmeti.svg';
 import desalinasyonSistemiSvg from './assets/svg/desalinasyon-sistemi.svg';
 import destekHizmetleriSvg from './assets/svg/destek-hizmetleri.svg';
 import fitnessVeSpaSvg from './assets/svg/fitness-ve-spa.svg';
+import guvenlikSvg from './assets/svg/guvenlik.svg';
 import konsiyerjSvg from './assets/svg/konsiyerj.svg';
 import otelSvg from './assets/svg/otel.svg';
+import otoparkSvg from './assets/svg/otopark.svg';
 import ozelHavuzSvg from './assets/svg/ozel-havuz.svg';
 import ozelIskeleSvg from './assets/svg/ozel-iskele.svg';
 import sarjIstasyonuSvg from './assets/svg/sarj-istasyonu.svg';
@@ -14,6 +16,7 @@ import yuruyusVeOyunAlanlariSvg from './assets/svg/yuruyus-ve-oyun-alanlari.svg'
 export const svgFiles: Record<string, string> = {
   otel: otelSvg,
   konsiyerj: konsiyerjSvg,
+  otopark: otoparkSvg,
   'buggy-hizmeti': buggyHizmetiSvg,
   'destek-hizmetleri': destekHizmetleriSvg,
   'desalinasyon-sistemi': desalinasyonSistemiSvg,
@@ -22,18 +25,24 @@ export const svgFiles: Record<string, string> = {
   'ozel-iskele': ozelIskeleSvg,
   'ozel-havuz': ozelHavuzSvg,
   'sarj-istasyonu': sarjIstasyonuSvg,
+  guvenlik: guvenlikSvg,
 };
 
 // Array of service items
 export const serviceItems = [
   // { slug: 'otel', name: 'Otel' },
-  { slug: 'konsiyerj', name: 'Konsiyerj' },
-  { slug: 'buggy-hizmeti', name: 'Buggy Hizmeti' },
-  { slug: 'destek-hizmetleri', name: 'Destek Hizmetleri' },
-  { slug: 'desalinasyon-sistemi', name: 'Desalinasyon Sistemi' },
-  { slug: 'fitness-ve-spa', name: 'Fitness ve SPA' },
-  { slug: 'yuruyus-ve-oyun-alanlari', name: 'Yürüyüş ve Oyun Alanları' },
-  { slug: 'ozel-iskele', name: 'Özel İskele' },
-  { slug: 'ozel-havuz', name: 'Özel Havuz' },
-  { slug: 'sarj-istasyonu', name: 'Sarj İstasyonu' },
+  { slug: 'konsiyerj', name: { tr: 'Konsiyerj', en: 'Concierge' } },
+  { slug: 'buggy-hizmeti', name: { tr: 'Buggy Hizmeti', en: 'Buggy Service' } },
+  { slug: 'destek-hizmetleri', name: { tr: 'Destek Hizmetleri', en: 'Support Services' } },
+  { slug: 'otopark', name: { tr: 'Otopark', en: 'Parking' } },
+  { slug: 'desalinasyon-sistemi', name: { tr: 'Desalinasyon Sistemi', en: 'Desalination System' } },
+  {
+    slug: 'yuruyus-ve-oyun-alanlari',
+    name: { tr: 'Yürüyüş ve Oyun Alanları', en: 'Walking and Play Areas' },
+  },
+  { slug: 'ozel-iskele', name: { tr: 'Özel İskele', en: 'Private Dock' } },
+  { slug: 'ozel-havuz', name: { tr: 'Özel Havuz', en: 'Private Pool' } },
+  { slug: 'guvenlik', name: { tr: 'Güvenlik', en: 'Security' } },
+  { slug: 'sarj-istasyonu', name: { tr: 'Sarj İstasyonu', en: 'Charging Station' } },
+  { slug: 'fitness-ve-spa', name: { tr: 'Fitness ve SPA', en: 'Fitness and SPA' } },
 ];
