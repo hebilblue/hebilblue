@@ -1,6 +1,5 @@
 'use client';
 
-import { textStyles } from '@/app/styles/typography';
 import { useState } from 'react';
 
 const ContactForm = () => {
@@ -30,37 +29,31 @@ const ContactForm = () => {
         setSubmitStatus({ type: null, message: '' });
 
         try {
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
+            const { firstName, lastName, email, message } = formData;
+            const subject = 'HebilBlue İletişim Formu - Yeni Mesaj';
+            const body = `Ad: ${firstName} ${lastName}\nE-posta: ${email}\n\nMesaj:\n${message}`;
+
+            const mailtoLink = `mailto:info@hebilblue.com.tr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // Open default email client
+            window.open(mailtoLink, '_blank');
+
+            setSubmitStatus({
+                type: 'success',
+                message: 'E-posta uygulamanız açıldı. Mesajınızı gönderebilirsiniz.'
             });
 
-            const data = await response.json();
-
-            if (response.ok) {
-                setSubmitStatus({
-                    type: 'success',
-                    message: data.message
-                });
-                setFormData({
-                    firstName: '',
-                    lastName: '',
-                    email: '',
-                    message: ''
-                });
-            } else {
-                setSubmitStatus({
-                    type: 'error',
-                    message: data.error || 'Bir hata oluştu'
-                });
-            }
-        } catch {
+            setFormData({
+                firstName: '',
+                lastName: '',
+                email: '',
+                message: ''
+            });
+        } catch (error) {
+            console.error('Form submission error:', error);
             setSubmitStatus({
                 type: 'error',
-                message: 'Bağlantı hatası. Lütfen tekrar deneyiniz.'
+                message: 'Bir hata oluştu. Lütfen tekrar deneyiniz.'
             });
         } finally {
             setIsSubmitting(false);
@@ -109,22 +102,15 @@ const ContactForm = () => {
                     className="w-full bg-[#FFFFFF] rounded-[8px] p-[12px] font-roboto font-regular text-[14px] text-[#393C41] resize-none"
                 />
             </div>
-            
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-[40px] bg-[#0066CC] hover:bg-[#0052A3] disabled:bg-[#CCCCCC] rounded-[8px] text-white font-roboto font-medium text-[14px] transition-colors duration-200"
+                className="w-full h-[40px] bg-[#C9B18B] rounded-[8px] font-roboto font-medium text-[14px] text-[#FFFFFF] hover:bg-[#B8A07A] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-                <p className={textStyles.contactButton}>
                 {isSubmitting ? 'Gönderiliyor...' : 'Gönder'}
-                </p>
             </button>
-
             {submitStatus.type && (
-                <div className={`mt-2 p-3 rounded-[8px] text-[14px] ${
-                    submitStatus.type === 'success' 
-                        ? 'bg-green-100 text-green-800' 
-                        : 'bg-red-100 text-red-800'
+                <div className={`text-[14px] font-roboto ${submitStatus.type === 'success' ? 'text-green-600' : 'text-red-600'
                 }`}>
                     {submitStatus.message}
                 </div>

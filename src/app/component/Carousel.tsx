@@ -4,9 +4,10 @@ import { useState } from "react"
 
 interface CarouselProps {
   slides: React.ReactNode[]
+  height?: string
 }
 
-export default function Carousel({ slides }: CarouselProps) {
+export default function Carousel({ slides, height = "h-[300px] md:h-[400px]" }: CarouselProps) {
   const [activeSlide, setActiveSlide] = useState(0)
   const totalSlides = slides.length
 
@@ -19,7 +20,7 @@ export default function Carousel({ slides }: CarouselProps) {
   }
 
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] overflow-hidden" style={{ WebkitTransform: 'translateZ(0)' }}>
+    <div className={`relative w-full ${height} overflow-hidden`} style={{ WebkitTransform: 'translateZ(0)' }}>
         {slides.map((slide, index) => (
           <div
             key={index}

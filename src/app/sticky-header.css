@@ -1,0 +1,22 @@
+/* Sticky header styles */
+.sticky-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+  background: linear-gradient(to bottom, #08162E 8%, rgba(8, 22, 46, 0.7) 50%, rgba(8, 22, 46, 0) 100%) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* When at top of page, override with solid background */
+.sticky-header.at-top {
+  background: #08162E !important;
+  backdrop-filter: none !important;
+}
+
+/* Safari specific support */
+@supports (-webkit-touch-callout: none) {
+  .sticky-header {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+  }
+} 

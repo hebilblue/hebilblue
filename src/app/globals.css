@@ -15,6 +15,7 @@
 @theme {
   --font-family-roboto: "Roboto", sans-serif;
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -22,9 +23,26 @@
   }
 }
 
+/* Global sticky header styles - MUST WORK IN PRODUCTION */
+header,
+.sticky-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 9999 !important;
+}
+
+/* Force sticky positioning for static exports */
+@media all {
+
+  header,
+  .sticky-header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+  }
+}
 /* Safari-specific fixes */
 @supports (-webkit-touch-callout: none) {
-
   /* Fix for Safari viewport height issues */
   .h-screen {
     height: -webkit-fill-available;
@@ -48,8 +66,6 @@
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
   }
-
-
 
   /* Fix for Safari border rendering */
   .border-b-1 {
@@ -95,17 +111,15 @@
       -webkit-transform: translateZ(0);
       transform: translateZ(0);
     }
-  
-    /* Ensure sticky headers work properly */
-    header.sticky {
+                                                                /* Ensure sticky headers work properly in Safari */
+                                                                header,
+                                                                .sticky-header {
       position: -webkit-sticky !important;
       position: sticky !important;
       top: 0 !important;
       z-index: 9999 !important;
-      -webkit-transform: translateZ(0) !important;
-      transform: translateZ(0) !important;
-      will-change: transform;
     }
+
   /* Fix for Safari z-index stacking */
   .z-10 {
     z-index: 10;
@@ -135,15 +149,16 @@
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
 }
+
 body {
   background: var(--background);
   color: var(--foreground);
   /* Safari-specific body fixes */
-    -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
   /* Ensure proper sticky positioning */
-    overflow-x: hidden;
+  overflow-x: hidden;
   }
   
   html {
@@ -151,7 +166,6 @@ body {
     overflow-x: hidden;
     height: 100%;
 }
-
 
 /* Custom animations for coming soon page */
 @keyframes blob {
@@ -190,6 +204,7 @@ body {
     -webkit-transform: translate(0px, 0px) scale(1);
   }
 }
+
 .animate-blob {
   animation: blob 7s infinite;
   -webkit-animation: blob 7s infinite;
@@ -204,6 +219,7 @@ body {
   animation-delay: 4s;
   -webkit-animation-delay: 4s;
 }
+
 /* Fade-in animations for logo patterns */
 @keyframes fadeIn {
   0% {

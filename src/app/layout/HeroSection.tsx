@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import logoPattern from "../assets/hebilblue-logo-pattern.png"
+import logoPattern from "../assets/hebilblue-logo-pattern.webp"
 import { useInView } from '../hooks/useInView'
 
 const HeroSection = ({ children, id, className }: { children: React.ReactNode, id?: string, className?: string }) => {

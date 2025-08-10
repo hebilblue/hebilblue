@@ -1,26 +1,30 @@
-# HebilBlue - Static HTML/CSS/JS Website
+# HebilBlue - Next.js Website
 
-This is a static website converted from a Next.js project to regular HTML, CSS, and JavaScript. The website showcases the HebilBlue luxury real estate project in Bodrum, Turkey.
+This is a Next.js website showcasing the HebilBlue luxury real estate project in Bodrum, Turkey. The website features a modern, responsive design with internationalization support.
 
 ## Project Structure
 
 ```
 hebilblue/
-├── index.html          # Main HTML file
-├── styles.css          # All CSS styles
-├── script.js           # JavaScript functionality
 ├── src/
 │   └── app/
-│       └── assets/     # All images and SVG files
+│       ├── [lang]/     # Internationalized routes (en, tr)
+│       ├── component/  # React components
+│       ├── assets/     # Images and SVG files
+│       ├── i18n/       # Internationalization files
+│       └── layout.tsx  # Root layout
+├── public/             # Static assets
+├── package.json        # Dependencies and scripts
 └── README.md           # This file
 ```
 
 ## Features
 
 - **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Internationalization**: Support for Turkish (tr) and English (en) languages
 - **Mobile Menu**: Hamburger menu for mobile navigation
 - **Smooth Scrolling**: Navigation links scroll smoothly to sections
-- **Contact Form**: Functional contact form with validation
+- **Contact Form**: Simple contact form that opens user's email client
 - **Photo Gallery**: Clickable images with lightbox functionality
 - **Carousel**: Auto-advancing image carousels
 - **Scroll Animations**: Elements animate in as you scroll
@@ -40,11 +44,14 @@ hebilblue/
 
 ## How to Use
 
-1. **Open the website**: Simply open `index.html` in any modern web browser
-2. **Navigate**: Use the header navigation to jump to different sections
-3. **Mobile menu**: On mobile devices, tap the hamburger menu for navigation
-4. **Contact form**: Fill out the contact form to get in touch
-5. **Photo gallery**: Click on any image in the gallery to view it in a lightbox
+1. **Install dependencies**: `npm install`
+2. **Start development server**: `npm run dev`
+3. **Open the website**: Navigate to `http://localhost:3000`
+4. **Language switching**: Use the language switcher in the header
+5. **Navigate**: Use the header navigation to jump to different sections
+6. **Mobile menu**: On mobile devices, tap the hamburger menu for navigation
+7. **Contact form**: Fill out the contact form to open your email client
+8. **Photo gallery**: Click on any image in the gallery to view it in a lightbox
 
 ## Browser Compatibility
 
@@ -56,39 +63,46 @@ hebilblue/
 
 ## File Descriptions
 
-### index.html
-The main HTML file containing all the content structure, including:
-- Header with navigation
+### src/app/[lang]/page.tsx
+The main page component with internationalized content, including:
+- Header with navigation and language switcher
 - All content sections
 - Contact form
 - Footer
 
-### styles.css
-Complete CSS styling including:
-- Responsive design with media queries
-- Typography system
-- Layout and positioning
-- Animations and transitions
-- Mobile-first approach
+### src/app/component/
+React components including:
+- ContactForm: Simple contact form with mailto functionality
+- Header: Navigation and language switching
+- Carousel: Image carousel component
+- PhotoGrid: Photo gallery with lightbox
+- Various layout components
 
-### script.js
-JavaScript functionality including:
-- Mobile menu toggle
-- Smooth scrolling navigation
-- Contact form validation and submission
-- Photo gallery lightbox
-- Carousel functionality
-- Scroll animations
-- Image loading effects
+### src/app/i18n/
+Internationalization files:
+- locales/en.json: English translations
+- locales/tr.json: Turkish translations
+- index.ts: i18n configuration
+
+## Contact Form
+
+The contact form uses a simple mailto link approach:
+- When users submit the form, it opens their default email client
+- The email is pre-filled with the form data
+- Recipient: info@hebilblue.com.tr
+- Subject: "HebilBlue İletişim Formu - Yeni Mesaj"
+- Body: Includes name, email, and message
+
+This approach works with static hosting and doesn't require server-side email configuration.
 
 ## Customization
 
 ### Colors
-The main colors are defined as CSS variables in `styles.css`:
-- `--primary-color`: #08162E (Dark blue)
-- `--accent-color`: #C9B18B (Gold)
-- `--white`: #FFFFFF
-- `--dark-blue`: #242953
+The main colors are defined in the Tailwind CSS configuration:
+- Primary: #08162E (Dark blue)
+- Accent: #C9B18B (Gold)
+- White: #FFFFFF
+- Dark blue: #242953
 
 ### Typography
 The website uses the Roboto font family with different weights:
@@ -97,7 +111,7 @@ The website uses the Roboto font family with different weights:
 - Bold (700) for headings and buttons
 
 ### Images
-All images are located in the `src/app/assets/` directory:
+All images are located in the `src/app/assets/` directory and are optimized for web use:
 - Main project images
 - SVG icons for services
 - Logo and branding materials

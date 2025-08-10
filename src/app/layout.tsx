@@ -1,10 +1,9 @@
 
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import { Header } from "./component";
 import "./globals.css";
-import { Providers } from "./providers";
 import "./safari-fixes.css";
+import "./sticky-header.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -23,7 +22,7 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en">
+    <html lang="tr">
       <head>
         <link
           rel="preconnect"
@@ -37,12 +36,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${roboto.className} antialiased`}>
-        <Providers>
-          <Header />
-          <main className="w-full bg-white relative">
-            {children}
-          </main>
-        </Providers>
+        {children}
       </body>
     </html>
   );

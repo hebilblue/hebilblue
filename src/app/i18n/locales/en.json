@@ -1,0 +1,72 @@
+{
+  "header": {
+    "callUs": "Call Us",
+    "getDirections": "Get Directions",
+    "projectCatalog": "project catalog",
+    "navigation": {
+      "hebilblue": "Hebilblue",
+      "project": "project",
+      "sitePlan": "site plan",
+      "amenities": "amenities",
+      "gallery": "gallery",
+      "hotel": "hotel",
+      "contact": "contact"
+    }
+  },
+  "hero": {
+    "title": "Rebirth with Aegean Breezes",
+    "description": "In Bodrum's blue-flagged Hebil Bay, just steps from the sea; a new life experience embracing all the colors of nature. This prestigious project, consisting of 80 modern structures, each with its own private pool, offers a unique lifestyle with its commanding position over the Aegean blue, panoramic sea view, and private pier. Surrounded by olive trees and pine forests, Hebil Bay offers a privileged living space with its location adjacent to Paradise Bay's clarity, while promising tranquility close to Türkbükü's social life but far from the crowds. Hebil Blue is designed for those who want to experience Bodrum in all four seasons and redefine life.",
+    "description_short": "A prestigious project consisting of 80 modern structures in Bodrum Hebil Bay, just steps from the sea. It offers a unique lifestyle with its commanding position over the Aegean blue and private pier. A peaceful environment close to social life but immersed in nature."
+  },
+  "banner": {
+    "title": "hebil blue hotel",
+    "description": "A different life awaits you in Hebil, one of Bodrum's bays crowned with blue, just a few steps away from the sea. With its modern architecture, natural materials and timeless aesthetics, Hebil Blue redefines life with its understated luxury approach, sustainable living solutions and privileged location."
+  },
+  "banner_2": {
+    "title": "hebil blue hotel",
+    "description": "Silence, Elegance and a World-Class Living Experience The unique nature and architecture of Hebil Blue will soon be crowned with the signature of a world-renowned prestigious brand. Standing out with its flawless service understanding, sophisticated design, and timeless luxury, this brand will offer a prestigious destination designed for privileged guests in Bodrum's most special bay. The countdown has begun for this exclusive living experience."
+  },
+  "verandalar": "VERANDAS, FIRE PITS AND INNER GARDENS...",
+  "verandalar_description": "Spacious and airy verandas, stylish fire pits, and carefully crafted inner gardens are designed to make every moment special and add aesthetic value to your life.\nWhile every detail inspires you to collect memories that will be etched in your mind, the landscape shaped with imported plants offers refined naturalness. The advanced technology lighting systems that elegantly envelop the night perfectly complete the magic of the atmosphere.",
+  "zamansiz_mimari_description": "Every detail in Hebil Blue is designed to provide the highest level of elegance and comfort. Spacious verandas opening to panoramic views, special seating areas enriched with fire pits, and inner gardens integrated with landscaping add value to every moment and aesthetics to every glance. These unique living spaces immersed in nature come together with the clean lines of modern architecture and premium material selection, offering a new definition of privilege. Each of the 80 modern structures is equipped with its own pool, private garden, and living spaces that create a fascinating atmosphere at every hour of the day.",
+  "kullanim_alani_description_1": "Hebil Blue is designed to suit different lifestyle preferences. ",
+  "kullanim_alani_description_2": "42 Type A units offer wider and more versatile living spaces with 6+1 and 5+2 options, while 38 Type B units offer comfort and functionality together with a 5+1 plan. Each structure is equipped with its private garden, pool, and spacious verandas, as well as refined details and high-quality materials.",
+  "kullanim_alani_description_3": "Type A has a total of 3 parking spaces, 2 covered and 1 open, while Type B has 1 covered and 1 open parking space.",
+  "kullanim_alani_description_4": "This way, a perfect living space is offered not only visually but also functionally.",
+  "doga_description_1": "Hebil Blue is not just a living space; it offers a special living experience with every detail thought out, providing enjoyment in all four seasons. You can start your day with a peaceful walk, enjoy the sea at your private pier, then relax at the spa center.",
+  "doga_description_2": "Restaurant & Snack Bar. Fitness & Spa Areas, Walking Trails & Children's Playgrounds, Electric Vehicle Charging Stations, Covered and Open Parking, Buggy Service, Gardening & Cleaning Services, Seawater Desalination System, Hotel Comfort Service, 24/7 Security.",
+  "timeless_architecture": "Timeless Architecture, Unique Living Spaces",
+  "stats": {
+    "modern_buildings": "MODERN BUILDINGS",
+    "project_area": "PROJECT AREA",
+    "pier": "PIER",
+    "units": "units",
+    "square_meters": "m²"
+  },
+  "lifestyle_areas": "LIVING SPACES SUITABLE FOR YOUR NEEDS",
+  "comfort_nature": "Comfort in every moment of life, privilege immersed in nature…",
+  "city_dynamics": "CLOSE TO CITY DYNAMICS, IN THE HEART OF NATURE.",
+  "project_images": "Project Images",
+  "location": {
+    "title": "LOCATION",
+    "subtitle": "Hebil Bay / Türkbükü",
+    "description": "Close to Tranquility, Yet in the Heart of Life! While located in a peaceful atmosphere immersed in nature; you are just minutes away from Bodrum's most popular spots. Go down to the beach at any time of day you wish, go shopping at Yalıkavak Marina… All just a road away!"
+  },
+  "contact": {
+    "title": "Call Us",
+    "description": "Fill out the form to discover your dream home on site and learn about project-specific privileges; our lifestyle consultants will call you. If you wish, we would be happy to host you at our sales office."
+  },
+  "footer": {
+    "copyright": "Copyright © 2025 HEBILBLUE All rights reserved.",
+    "office": "Hebil Blue Sales Office",
+    "address": "Türkbükü Mah. Hebil Cad. 156 Sk. Bodrum/MUĞLA",
+    "phone": "+90 532 635 56 62"
+  },
+  "locations": {
+    "turkbuku": "türkbükü",
+    "gundogan": "gündoğan",
+    "cennet_koyu": "paradise bay",
+    "yalikavak": "yalıkavak",
+    "airport": "airport"
+  }
+} 

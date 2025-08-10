@@ -3,17 +3,18 @@
   "pages404": true,
   "caseSensitive": false,
   "basePath": "",
-  "redirects": [
+  "redirects": [],
+  "headers": [],
+  "dynamicRoutes": [
     {
-      "source": "/:path+/",
-      "destination": "/:path+",
-      "internal": true,
-      "statusCode": 308,
-      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+      "page": "/[lang]",
+      "regex": "^/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)(?:/)?$"
     }
   ],
-  "headers": [],
-  "dynamicRoutes": [],
   "staticRoutes": [
     {
       "page": "/",
