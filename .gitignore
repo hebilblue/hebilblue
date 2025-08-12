@@ -6,8 +6,9 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Next.js build output
+.next
 .next/
-out/             # Ignore only if you're not using `next export`
+out/
 
 # Logs
 logs/
