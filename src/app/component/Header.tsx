@@ -67,16 +67,15 @@ const scrolltoHash = function (element_id: string) {
           <div className="flex flex-row items-center gap-[12px]">
             <a onClick={() => scrolltoHash('iletisim')} className="flex flex-row items-center gap-[5px] h-[24px] px-[6px] bg-[#C9B18B] rounded-[8px] cursor-pointer">
               <Image src={message} alt="message" width={15} height={17} />
-              <p className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.callUs')}</p>
-
+              <p lang={i18n.language} className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.callUs')}</p>
             </a>
             <Link target="_blank" href="https://www.google.com/maps/place/Türkbükü,+Hebil+Cd.+No:156+D:000+00,+48483+Bodrum%2FMuğla/@37.1470123,27.3659852,17z/data=!4m9!1m2!2m1!1sCopyright+©+2025+hebilblue+All+rights+reserved.+Hebil+Blue+Satış+Ofisi+Türkbükü+Mah.+Hebil+Cad.+156+Sk.+Bodrum%2FMUĞLA+%2B90+252+000+00+00!3m5!1s0x14be6ff981187665:0x19b243e1d7730293!8m2!3d37.1470081!4d27.3708561!15sCo0BQ29weXJpZ2h0IMKpIDIwMjUgaGViaWxibHVlIEFsbCByaWdodHMgcmVzZXJ2ZWQuIEhlYmlsIEJsdWUgU2F0xLHFnyBPZmlzaSBUw7xya2LDvGvDvCBNYWguIEhlYmlsIENhZC4gMTU2IFNrLiBCb2RydW0vTVXEnkxBICs5MCAyNTIgMDAwIDAwIDAwkgEQY29tcG91bmRfc2VjdGlvbuABAA?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D" className="flex flex-row items-center gap-[5px] h-[24px] px-[6px] bg-[#08162E] rounded-[8px]">
               <Image src={pin} alt="pin" width={11} height={16} />
-              <p className={`${typography.body.small} text-white uppercase`}>{t('header.getDirections')}</p>
+              <p lang={i18n.language} className={`${typography.body.small} text-white uppercase`}>{t('header.getDirections')}</p>
             </Link>
             <Link href={i18n.language === "tr" ? "/katalog_tr.pdf" : "/katalog_en.pdf"} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center gap-[5px] h-[24px] px-[6px] bg-[#08162E] rounded-[8px]">
               <Image src={folder} alt="folder" width={17} height={17} />
-              <p className={`${typography.body.small} text-white uppercase`}>{t('header.projectCatalog')}</p>
+              <p lang={i18n.language} className={`${typography.body.small} text-white uppercase`}>{t('header.projectCatalog')}</p>
             </Link>
             <Link target="_blank" href="https://www.facebook.com/share/1712nP8mXi/?mibextid=wwXIfr">
               <Image src={facebook} alt="facebook" width={36} height={36} className="text-white" />
@@ -89,7 +88,7 @@ const scrolltoHash = function (element_id: string) {
           <div className="flex flex-row items-center">
             {pages.map((page, index) => (
               <div key={index} className="flex flex-row items-center cursor-pointer">
-                <a onClick={() => scrolltoHash(page.key)} className={`${typography.body.small} text-white uppercase hover:font-medium`}>{page.label}</a>
+                <a lang={i18n.language} onClick={() => scrolltoHash(page.key)} className={`${typography.body.small} text-white uppercase hover:font-medium`}>{page.label}</a>
                 {index !== pages.length - 1 && <div className="w-[1px] h-[19px] bg-[#C9B18B] mx-[12px]" />}
               </div>
             ))}
@@ -130,6 +129,7 @@ const scrolltoHash = function (element_id: string) {
             {pages.map((page, index) => (
               <div key={index} className={`border-b border-[#C9B18B]/30 pb-3 sm:pb-4 ${index !== 0 ? 'pt-0' : 'pt-3'}`}>
                 <a 
+                  lang={i18n.language}
                   onClick={() => handleNavClick(page.key)} 
                   className={`${typography.body.regular} text-white uppercase hover:text-[#C9B18B] transition-colors cursor-pointer block py-2`}
                 >
@@ -143,15 +143,15 @@ const scrolltoHash = function (element_id: string) {
           <div className="mt-auto space-y-3 sm:space-y-4 pt-4">
             <Link href="/" className="flex flex-row items-center justify-center gap-[6px] sm:gap-[8px] h-[36px] sm:h-[40px] px-[10px] sm:px-[12px] bg-[#C9B18B] rounded-[8px] w-full">
               <Image src={message} alt="message" width={15} height={17} />
-              <p className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.callUs')}</p>
+              <p lang={i18n.language} className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.callUs')}</p>
             </Link>
             <Link target="_blank" href="https://www.google.com/maps/place/Türkbükü,+Hebil+Cd.+No:156+D:000+00,+48483+Bodrum%2FMuğla/@37.1470123,27.3659852,17z/data=!4m9!1m2!2m1!1sCopyright+©+2025+hebilblue+All+rights+reserved.+Hebil+Blue+Satış+Ofisi+Türkbükü+Mah.+Hebil+Cad.+156+Sk.+Bodrum%2FMUĞLA+%2B90+252+000+00+00!3m5!1s0x14be6ff981187665:0x19b243e1d7730293!8m2!3d37.1470081!4d27.3708561!15sCo0BQ29weXJpZ2h0IMKpIDIwMjUgaGViaWxibHVlIEFsbCByaWdodHMgcmVzZXJ2ZWQuIEhlYmlsIEJsdWUgU2F0xLHFnyBPZmlzaSBUw7xya2LDvGvDvCBNYWguIEhlYmlsIENhZC4gMTU2IFNrLiBCb2RydW0vTVXEnkxBICs5MCAyNTIgMDAwIDAwIDAwkgEQY29tcG91bmRfc2VjdGlvbuABAA?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D" className="flex flex-row items-center justify-center gap-[6px] sm:gap-[8px] h-[36px] sm:h-[40px] px-[10px] sm:px-[12px] bg-white rounded-[8px] w-full">
               <Image src={pin} alt="pin" width={11} height={16} />
-              <p className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.getDirections')}</p>
+              <p lang={i18n.language} className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.getDirections')}</p>
             </Link>
             <Link href={i18n.language === "tr" ? "/katalog_tr.pdf" : "/katalog_en.pdf"} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center justify-center gap-[6px] sm:gap-[8px] h-[36px] sm:h-[40px] px-[10px] sm:px-[12px] bg-white rounded-[8px] w-full">
               <Image src={folder} alt="folder" width={17} height={17} />
-              <p className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.projectCatalog')}</p>
+              <p lang={i18n.language} className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.projectCatalog')}</p>
             </Link>
             <div className="flex justify-center">
               <LanguageSwitcher />

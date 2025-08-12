@@ -47,7 +47,7 @@ const LanguageSwitcher = () => {
     <div className="flex items-center gap-2">
       <button
         onClick={() => changeLanguage('tr')}
-        className={`px-3 py-1 rounded-md text-sm font-medium transition-all duration-200 font-roboto ${
+        className={`px-3 py-1 rounded-md text-sm font-medium transition-all duration-200 font-roboto cursor-pointer ${
           currentLang === 'tr'
             ? 'bg-[#C9B18B] text-[#08162E]'
             : 'bg-transparent text-white hover:bg-white/10'
@@ -58,7 +58,7 @@ const LanguageSwitcher = () => {
       <div className="w-px h-4 bg-[#C9B18B]/50"></div>
       <button
         onClick={() => changeLanguage('en')}
-        className={`px-3 py-1 rounded-md text-sm font-medium transition-all duration-200 font-roboto ${
+        className={`px-3 py-1 rounded-md text-sm font-medium transition-all duration-200 font-roboto cursor-pointer ${
           currentLang === 'en'
             ? 'bg-[#C9B18B] text-[#08162E]'
             : 'bg-transparent text-white hover:bg-white/10'

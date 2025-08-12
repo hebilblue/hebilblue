@@ -9,7 +9,9 @@ import otelSvg from './assets/svg/otel.svg';
 import otoparkSvg from './assets/svg/otopark.svg';
 import ozelHavuzSvg from './assets/svg/ozel-havuz.svg';
 import ozelIskeleSvg from './assets/svg/ozel-iskele.svg';
+import restoranVeSnackBarSvg from './assets/svg/restoran-ve-snack-bar.svg';
 import sarjIstasyonuSvg from './assets/svg/sarj-istasyonu.svg';
+import sporAlanlariSvg from './assets/svg/spor-alanlari.svg';
 import yuruyusVeOyunAlanlariSvg from './assets/svg/yuruyus-ve-oyun-alanlari.svg';
 
 // Create a mapping object for SVG files
@@ -26,6 +28,8 @@ export const svgFiles: Record<string, string> = {
   'ozel-havuz': ozelHavuzSvg,
   'sarj-istasyonu': sarjIstasyonuSvg,
   guvenlik: guvenlikSvg,
+  'restoran-ve-snack-bar': restoranVeSnackBarSvg,
+  'spor-alanlari': sporAlanlariSvg,
 };
 
 // Array of service items
@@ -36,6 +40,11 @@ export const serviceItems = [
   { slug: 'destek-hizmetleri', name: { tr: 'Destek Hizmetleri', en: 'Support Services' } },
   { slug: 'otopark', name: { tr: 'Otopark', en: 'Parking' } },
   { slug: 'desalinasyon-sistemi', name: { tr: 'Desalinasyon Sistemi', en: 'Desalination System' } },
+  {
+    slug: 'restoran-ve-snack-bar',
+    name: { tr: 'Restoran ve Snack Bar', en: 'Restaurant and Snack Bar' },
+  },
+  { slug: 'spor-alanlari', name: { tr: 'Spor Alanları', en: 'Sports Areas' } },
   {
     slug: 'yuruyus-ve-oyun-alanlari',
     name: { tr: 'Yürüyüş ve Oyun Alanları', en: 'Walking and Play Areas' },

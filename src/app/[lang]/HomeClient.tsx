@@ -3,10 +3,10 @@ import Image from "next/image"
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import doga from "../assets/doga.webp"
-import kusbakisi from "../assets/kusbakisi.webp"
 import kusbakisi2 from "../assets/kusbakisi_2.webp"
 import kusbakisi3 from "../assets/kusbakisi_3.webp"
 import otelNew from "../assets/otel-new.jpeg"
+import vaziyetPlan from "../assets/vaziyet-plani.jpg"
 import { KVKKAlert, PhotoGrid } from "../component"
 import Carousel from "../component/Carousel"
 import { MapComponent } from "../component/map"
@@ -131,6 +131,7 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
     { src: gallery_7, alt: "Hebil Blue Gallery_7", variant: 'normal' as const },
     { src: gallery_8, alt: "Hebil Blue Gallery_8", variant: 'normal' as const },
     { src: gallery_9, alt: "Hebil Blue Gallery_9", variant: 'normal' as const },
+    { src: vaziyetPlan, alt: "Vaziyet Planı", variant: 'normal' as const },
     { src: gallery_10, alt: "Hebil Blue Gallery_10", variant: 'normal' as const },
     { src: gallery_11, alt: "Hebil Blue Gallery_11", variant: 'normal' as const },
     { src: gallery_12, alt: "Hebil Blue Gallery_12", variant: 'normal' as const },
@@ -269,7 +270,7 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
                 </p>
               </div>
               <div className="overflow-hidden w-full min-w-[50%] md:w-[600px] h-[300px] md:h-[400px]">
-                <Image src={kusbakisi} alt="kusbakisi" className="w-full h-full object-cover mb-[16px] md:mb-0 transition-transform duration-700 ease-in-out hover:scale-110" />
+                <Image src={vaziyetPlan} alt="vaziyet planı" className="w-full h-full object-cover mb-[16px] md:mb-0 transition-transform duration-700 ease-in-out hover:scale-110" />
               </div>
             </div>
             <div className="py-[24px] flex flex-col md:flex-row gap-[8px] items-center justify-between w-full">
