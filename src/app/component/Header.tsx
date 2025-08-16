@@ -40,17 +40,17 @@ const Header = () => {
     { key: "iletisim", label: t('header.navigation.contact') }
   ];
 
-const scrolltoHash = function (element_id: string) {
-  const element = document.getElementById(element_id)
-  if (element) {
-    const headerHeight = 80; // Approximate header height
-    const elementPosition = element.offsetTop - headerHeight;
-    window.scrollTo({
-      top: elementPosition,
-      behavior: "smooth"
-    });
+  const scrolltoHash = function (element_id: string) {
+    const element = document.getElementById(element_id)
+    if (element) {
+      const headerHeight = 80; // Approximate header height
+      const elementPosition = element.offsetTop + headerHeight
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth"
+      });
+    }
   }
-}
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);

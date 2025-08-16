@@ -213,7 +213,7 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
     <>
       <PhotoModal />
       <div className="w-full bg-white" style={{ WebkitTransform: 'translateZ(0)' }}>
-        <div className="w-full " id="proje" >
+        <div className="w-full " id="hebilblue" >
             <div className="overflow-hidden">
             <Carousel onClick={(idx: number) => onClick(idx, heroCarouselSources)} slides={heroCarouselImages} height="h-[300px] md:h-[600px]" />
             </div>
@@ -225,7 +225,7 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
           <button onClick={() => setSelectedItem({ src: otelNew, alt: "BANNER_HOTEL", variant: "normal" })} className="overflow-hidden w-full h-[300px] md:h-[600px] lg:h-[700px] xl:h-[800px] 2xl:h-[900px] cursor-pointer" id="hotel">
             <Image src={otelNew} alt="BANNER_HOTEL" className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-110" />
           </button>
-          <HeroSection id="hebilblue">
+          <HeroSection id="proje">
             {/* <h1 className={textStyles.heroTitle}>{t('banner.title')}</h1> */}
             <p lang={params.lang} className={textStyles.heroDescription}>{t('banner.description')}</p>
           </HeroSection>
@@ -357,7 +357,7 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
             }
           </div>
         </div>
-        <div className="bg-white flex flex-row gap-[8px] items-center justify-between w-full" id="iletisim">
+        <div className="bg-white flex flex-row gap-[8px] items-center justify-between w-full" >
           <MapComponent />
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between w-full bg-[#242953]">
@@ -365,7 +365,7 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
             <Image src={kusbakisi3} alt="kusbakisi3" className="w-full h-full object-cover" />
             <div className="bg-[#FFFFFF] w-full h-full absolute left-0 top-0 opacity-50" />
           </div>
-          <div className="relative w-full md:w-[50%] flex flex-col justify-center items-center h-full bg-[#242953] p-[24px]">
+          <div className="relative w-full md:w-[50%] flex flex-col justify-center items-center h-full bg-[#242953] p-[24px]" id="iletisim">
             <p lang={params.lang} className={textStyles.contactTitle}>{t('contact.title')}</p>
             <p lang={params.lang} className={`${textStyles.contactDescription} mt-[12px]`}>{t('contact.description')}</p>
             <div className="flex flex-col md:flex-row gap-[8px] mt-[12px] w-full">
