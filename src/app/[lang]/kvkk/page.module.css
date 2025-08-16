@@ -1,65 +1,96 @@
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.page {
+    position: relative;
+    min-height: 100vh;
+
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #f8fafc;
-    color: #1f2937;
-    line-height: 1.6;
-}
-
-/* Header styles */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    background: linear-gradient(to bottom, #08162E 8%, #08162E 0%, #08162E 0%, rgba(8, 22, 46, 0) 100%);
-    height: 130px;
-}
-
-header img {
-    height: auto;
-}
-
-header a {
-    color: white;
-    font-weight: 500;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-
-header a:hover {
-    opacity: 0.8;
-}
-
-/* Container */
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     background: white;
     min-height: calc(100vh - 130px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 -4px 6px -1px rgba(0, 0, 0, 0.1),    /* Top shadow */
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),     /* Bottom shadow */
+        -4px 0 6px -1px rgba(0, 0, 0, 0.1),    /* Left shadow */
+        4px 0 6px -1px rgba(0, 0, 0, 0.1);     /* Right shadow */
     border-radius: 8px;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    background-color: white;
+    z-index: 2;
 }
 
-/* Header */
+.watermark {
+    position: fixed;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: 1;
+    height: 100vh;
+    justify-content: center;
+}
+
+.watermarkImage {
+    object-fit: cover;
+    object-position: center;
+}
+
+.leftPattern {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+.rightPattern {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    padding: 20px 0;
+    z-index: 1;
+}
+
+.patternWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.patternImage {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    max-width: 100%;
+    height: auto;
+}
+
+.patternImage:hover {
+    opacity: 0.06;
+}
+
+.mirrored {
+    transform: scaleX(-1);
+}
+
 .header {
     text-align: center;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     border-bottom: 2px solid #e5e7eb;
+    position: relative;
+    z-index: 2;
 }
 
 .title {
@@ -67,12 +98,6 @@ header a:hover {
     font-weight: 700;
     color: #1f2937;
     margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-/* Sections */
-section {
-    margin-bottom: 2.5rem;
 }
 
 .subtitle {
@@ -82,6 +107,8 @@ section {
     margin: 2rem 0 1rem 0;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #e5e7eb;
+    position: relative;
+    z-index: 2;
 }
 
 .paragraph {
@@ -91,12 +118,10 @@ section {
     margin-bottom: 1rem;
 }
 
-/* Lists */
 .list {
     list-style-type: disc;
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
-    padding-left: 1rem;
 }
 
 .listItem {
@@ -106,7 +131,6 @@ section {
     margin-bottom: 0.5rem;
 }
 
-/* Contact info */
 .contactInfo {
     background: #f3f4f6;
     padding: 1.5rem;
@@ -119,15 +143,12 @@ section {
     color: #3b82f6;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.2s ease;
 }
 
 .contactInfo a:hover {
     text-decoration: underline;
-    color: #2563eb;
 }
 
-/* Footer */
 .footer {
     margin-top: 3rem;
     padding-top: 2rem;
@@ -158,7 +179,6 @@ section {
     font-size: 0.875rem;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .container {
         padding: 1rem;
@@ -199,22 +219,5 @@ section {
 
     .listItem {
         font-size: 0.875rem;
-    }
-}
-
-/* Print styles */
-@media print {
-    body {
-        background: white;
-    }
-
-    .container {
-        box-shadow: none;
-        margin: 0;
-        padding: 1rem;
-    }
-
-    .footer {
-        display: none;
     }
 }

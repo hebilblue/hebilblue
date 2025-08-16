@@ -73,5 +73,74 @@
     "showMore": "Show More",
     "showLess": "Show Less",
     "moreItems": "more"
+  },
+  "kvkk": {
+    "title": "Personal Data Protection Law (KVKK) Disclosure Text",
+    "description": "This Disclosure Text has been prepared for the purpose of informing users who visit the website (\"Site\") of the Hebil Blue project about the collection, processing, storage, and protection of their personal data within the scope of the Personal Data Protection Law No. 6698 (\"KVKK\").",
+    "sections": {
+      "dataController": {
+        "title": "1. Data Controller",
+        "content": "As the Hebil Blue Project (\"Company\"), we process your personal data in accordance with the relevant legislation as a \"data controller\" within the scope of KVKK."
+      },
+      "personalData": {
+        "title": "2. Processed Personal Data",
+        "description": "The following personal data may be collected from you through the website:",
+        "items": [
+          "First name, last name",
+          "Phone number",
+          "Email address",
+          "Message/communication content",
+          "Site usage data (IP address, information obtained through cookies)"
+        ]
+      },
+      "processingPurposes": {
+        "title": "3. Purposes of Processing Personal Data",
+        "description": "Your collected personal data is processed for the following purposes:",
+        "items": [
+          "Responding to communication requests",
+          "Providing information about the project and promotional activities",
+          "Improving service quality and enhancing user experience",
+          "Fulfilling legal obligations"
+        ]
+      },
+      "dataTransfer": {
+        "title": "4. Data Transfer",
+        "description": "Your personal data may be shared, limited only to the above purposes;",
+        "items": [
+          "With our business partners from whom we receive services",
+          "With authorized public institutions and organizations",
+          "With domestic servers and service providers when necessary"
+        ],
+        "note": "in accordance with KVKK."
+      },
+      "collectionMethod": {
+        "title": "5. Data Collection Method and Legal Basis",
+        "description": "Your personal data is collected electronically through forms on the website;",
+        "items": [
+          "Based on your explicit consent,",
+          "Directly related to the establishment or performance of a contract,",
+          "Within the scope of the Company's legitimate interests"
+        ],
+        "note": "and is processed accordingly."
+      },
+      "rights": {
+        "title": "6. Your Rights Under KVKK",
+        "description": "According to Article 11 of KVKK, you have the following rights:",
+        "items": [
+          "Learning whether your personal data is processed",
+          "Requesting information if it has been processed",
+          "Learning the purpose of processing and whether it is used for its intended purpose",
+          "Knowing the third parties to whom it is transferred domestically or abroad",
+          "Requesting correction of incomplete or incorrectly processed data",
+          "Requesting deletion or destruction in accordance with KVKK",
+          "Objecting to the emergence of a result against you through analysis solely by automatic systems",
+          "Requesting compensation for damages suffered"
+        ],
+        "contactInfo": "To exercise your rights, you can contact us:",
+        "email": "Email:"
+      }
+    },
+    "backToHome": "← Back to Home",
+    "copyright": "© 2025 HebilBlue. All rights reserved."
   }
 } 

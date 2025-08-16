@@ -67,7 +67,9 @@ const Header = () => {
         ref={headerRef}
         className={`sticky-header flex items-center justify-between p-2 md:p-4 border-b-1 border-b-[#C9B18B] w-full transition-all duration-300 ${isAtTop ? 'at-top' : ''}`}
       >
-        <Image src={logo} alt="HebilBlue" width={162} height={108} className="md:w-[162px] md:h-[108px] w-[68px] h-[48px]" />
+        <Link href="/">
+          <Image src={logo} alt="HebilBlue" width={162} height={108} className="md:w-[162px] md:h-[108px] w-[68px] h-[48px] cursor-pointer hover:opacity-80 transition-opacity duration-200" />
+        </Link>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-end flex-col gap-[12px]">

@@ -73,5 +73,74 @@
     "showMore": "Daha Fazla Göster",
     "showLess": "Daha Az Göster",
     "moreItems": "tane daha"
+  },
+  "kvkk": {
+    "title": "Kişisel Verilerin Korunması Kanunu (KVKK) Aydınlatma Metni",
+    "description": "İşbu Aydınlatma Metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu (\"KVKK\") kapsamında, Hebil Blue projesine ait web sitesini (\"Site\") ziyaret eden kullanıcıların kişisel verilerinin toplanması, işlenmesi, saklanması ve korunmasına ilişkin olarak bilgilendirme amacıyla hazırlanmıştır.",
+    "sections": {
+      "dataController": {
+        "title": "1. Veri Sorumlusu",
+        "content": "Hebil Blue Projesi (\"Şirket\") olarak, KVKK kapsamında \"veri sorumlusu\" sıfatıyla, kişisel verilerinizi ilgili mevzuata uygun olarak işlemekteyiz."
+      },
+      "personalData": {
+        "title": "2. İşlenen Kişisel Veriler",
+        "description": "Web sitesi üzerinden aşağıdaki kişisel verileriniz toplanabilir:",
+        "items": [
+          "Ad, soyad",
+          "Telefon numarası",
+          "E-posta adresi",
+          "Mesaj/ileti içeriği",
+          "Site kullanım verileri (IP adresi, çerezler aracılığıyla alınan bilgiler)"
+        ]
+      },
+      "processingPurposes": {
+        "title": "3. Kişisel Verilerin İşlenme Amaçları",
+        "description": "Toplanan kişisel verileriniz aşağıdaki amaçlarla işlenmektedir:",
+        "items": [
+          "İletişim taleplerinin yanıtlanması",
+          "Proje hakkında bilgi verilmesi ve tanıtım faaliyetleri",
+          "Hizmet kalitesinin artırılması ve kullanıcı deneyiminin geliştirilmesi",
+          "Yasal yükümlülüklerin yerine getirilmesi"
+        ]
+      },
+      "dataTransfer": {
+        "title": "4. Veri Aktarımı",
+        "description": "Kişisel verileriniz, yalnızca yukarıdaki amaçlarla sınırlı olmak kaydıyla;",
+        "items": [
+          "Hizmet aldığımız iş ortaklarımızla",
+          "Yetkili kamu kurum ve kuruluşlarıyla",
+          "Gerekli durumlarda yurt içindeki sunucu ve hizmet sağlayıcılarla"
+        ],
+        "note": "KVKK'ya uygun şekilde paylaşılabilir."
+      },
+      "collectionMethod": {
+        "title": "5. Veri Toplama Yöntemi ve Hukuki Sebep",
+        "description": "Kişisel verileriniz, web sitesi üzerindeki formlar aracılığıyla elektronik ortamda toplanmakta olup;",
+        "items": [
+          "Açık rızanıza dayalı olarak,",
+          "Bir sözleşmenin kurulması veya ifasıyla doğrudan ilgili olması,",
+          "Şirketin meşru menfaatleri kapsamında"
+        ],
+        "note": "işlenmektedir."
+      },
+      "rights": {
+        "title": "6. KVKK Kapsamındaki Haklarınız",
+        "description": "KVKK'nın 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:",
+        "items": [
+          "Kişisel verilerinizin işlenip işlenmediğini öğrenme",
+          "İşlenmişse buna ilişkin bilgi talep etme",
+          "Verilerin işlenme amacını ve amaca uygun kullanılıp kullanılmadığını öğrenme",
+          "Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme",
+          "Eksik veya yanlış işlenmiş verilerin düzeltilmesini isteme",
+          "KVKK'ya uygun olarak silinmesini veya yok edilmesini talep etme",
+          "İşlemenin yalnızca otomatik sistemler vasıtasıyla analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme",
+          "Uğradığınız zararın giderilmesini talep etme"
+        ],
+        "contactInfo": "Haklarınızı kullanmak için bizimle iletişime geçebilirsiniz:",
+        "email": "E-posta:"
+      }
+    },
+    "backToHome": "← Ana Sayfaya Dön",
+    "copyright": "© 2025 HebilBlue. Tüm hakları saklıdır."
   }
 } 
