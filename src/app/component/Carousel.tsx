@@ -1,13 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import { useState } from "react";
 
 interface CarouselProps {
   slides: React.ReactNode[]
-  height?: string
+  height?: string;
+  onClick?: (index: number) => void;
 }
 
-export default function Carousel({ slides, height = "h-[300px] md:h-[400px]" }: CarouselProps) {
+export default function Carousel({ slides, height = "h-[300px] md:h-[400px]", onClick }: CarouselProps) {
   const [activeSlide, setActiveSlide] = useState(0)
   const totalSlides = slides.length
 
@@ -22,14 +23,15 @@ export default function Carousel({ slides, height = "h-[300px] md:h-[400px]" }: 
   return (
     <div className={`relative w-full ${height} overflow-hidden`} style={{ WebkitTransform: 'translateZ(0)' }}>
         {slides.map((slide, index) => (
-          <div
+          <button
             key={index}
+            onClick={() => onClick?.(index)}
             className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${activeSlide === index ? "opacity-100" : "opacity-0"
               }`}
             style={{ zIndex: activeSlide === index ? 1 : 0 }}
           >
             {slide}
-          </div>
+          </button>
         ))}
       <div className="flex flex-row absolute bottom-2 left-2 md:bottom-4 md:left-4 z-10">
         <button className="bg-[#242953] p-[5px] px-[8px] hover:bg-[#575d83] transition-colors" onClick={goToPreviousSlide}>

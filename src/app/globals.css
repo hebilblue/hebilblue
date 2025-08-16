@@ -23,6 +23,10 @@
   }
 }
 
+button,
+a {
+  cursor: pointer;
+}
 /* Global sticky header styles - MUST WORK IN PRODUCTION */
 header,
 .sticky-header {
