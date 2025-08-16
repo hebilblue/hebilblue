@@ -30,7 +30,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/kvkk": {
+    "/en/kvkk": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -43,8 +43,32 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/kvkk",
-      "dataRoute": "/kvkk.rsc",
+      "srcRoute": "/[lang]/kvkk",
+      "dataRoute": "/en/kvkk.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/tr/kvkk": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/[lang]/kvkk",
+      "dataRoute": "/tr/kvkk.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -128,6 +152,31 @@
     }
   },
   "dynamicRoutes": {
+    "/[lang]/kvkk": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "routeRegex": "^/([^/]+?)/kvkk(?:/)?$",
+      "dataRoute": "/[lang]/kvkk.rsc",
+      "fallback": null,
+      "dataRouteRegex": "^/([^/]+?)/kvkk\\.rsc$",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/[lang]": {
       "experimentalBypassFor": [
         {
@@ -156,8 +205,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "9310297334aa6124cc4e98d768d230fb",
-    "previewModeSigningKey": "10abcc340a3e942f200eb04d97182ff06ade2e9ca19016df3265b3b965c4d4b0",
-    "previewModeEncryptionKey": "d8d860ca814bf12457515bfd77d3b6dd6f7334b078acc0a45c4c8f6bffb59dbd"
+    "previewModeId": "3c1756fe088ed75fe3d017d821d8487c",
+    "previewModeSigningKey": "056db3beb2e56a611ef5e71039898355633966aaaeccdcf7b7e29a93c549c365",
+    "previewModeEncryptionKey": "7072c084e16cac707abeac811efd708e71a49aba7970e30ed291ed811a4bb41d"
   }
 }

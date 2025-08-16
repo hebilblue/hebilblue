@@ -13,6 +13,14 @@
         "nxtPlang": "nxtPlang"
       },
       "namedRegex": "^/(?<nxtPlang>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[lang]/kvkk",
+      "regex": "^/([^/]+?)/kvkk(?:/)?$",
+      "routeKeys": {
+        "nxtPlang": "nxtPlang"
+      },
+      "namedRegex": "^/(?<nxtPlang>[^/]+?)/kvkk(?:/)?$"
     }
   ],
   "staticRoutes": [
@@ -33,12 +41,6 @@
       "regex": "^/favicon\\.ico(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/favicon\\.ico(?:/)?$"
-    },
-    {
-      "page": "/kvkk",
-      "regex": "^/kvkk(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/kvkk(?:/)?$"
     }
   ],
   "dataRoutes": [],

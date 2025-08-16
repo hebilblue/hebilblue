@@ -160,6 +160,8 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
   }, [params.lang, i18n]);
 
 
+
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {

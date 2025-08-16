@@ -27,6 +27,30 @@ button,
 a {
   cursor: pointer;
 }
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure proper scroll positioning for anchor links with fixed header */
+:target {
+  scroll-margin-top: 100px;
+}
+
+/* Add scroll threshold and controlled scrolling with scroll-snap */
+html {
+  scroll-padding-top: 100px;
+}
+
+body {
+  scroll-snap-type: y proximity;
+}
+
+/* Define snap points for sections */
+[id] {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
 /* Global sticky header styles - MUST WORK IN PRODUCTION */
 header,
 .sticky-header {

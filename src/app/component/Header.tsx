@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from 'react-i18next';
 import logo from "../assets/logo.webp";
@@ -9,14 +10,22 @@ import folder from "../assets/svg/folder.svg";
 import instagram from "../assets/svg/instagram.svg";
 import pin from "../assets/svg/location-pin.svg";
 import message from "../assets/svg/message.svg";
+
 import { typography } from "../styles/typography";
 import LanguageSwitcher from "./LanguageSwitcher";
+
+const googleLink = "https://www.google.com/maps/place/Türkbükü,+Hebil+Cd.+No:156+D:000+00,+48483+Bodrum%2FMuğla/@37.1470123,27.3659852,17z/data=!4m9!1m2!2m1!1sCopyright+©+2025+hebilblue+All+rights+reserved.+Hebil+Blue+Satış+Ofisi+Türkbükü+Mah.+Hebil+Cad.+156+Sk.+Bodrum%2FMUĞLA+%2B90+252+000+00+00!3m5!1s0x14be6ff981187665:0x19b243e1d7730293!8m2!3d37.1470081!4d27.3708561!15sCo0BQ29weXJpZ2h0IMKpIDIwMjUgaGViaWxibHVlIEFsbCByaWdodHMgcmVzZXJ2ZWQuIEhlYmlsIEJsdWUgU2F0xLHFnyBPZmlzaSBUw7xya2LDvGvDvCBNYWguIEhlYmlsIEJhZC4gMTU2IFNrLiBCb2RydW0vTVXEnkxBICs5MCAyNTIgMDAwIDAwIDAwkgEQY29tcG91bmRfc2VjdGlvbuABAA?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D"
 
 const Header = () => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
   const headerRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
+
+  // Check if we're on the KVKK page
+  const isOnKVKKPage = pathname?.includes('/kvkk');
+
 
 
   // Scroll detection logic
@@ -33,32 +42,26 @@ const Header = () => {
   const pages = [
     { key: "hebilblue", label: t('header.navigation.hebilblue') },
     { key: "proje", label: t('header.navigation.project') },
-    { key: "vaziyet planı", label: t('header.navigation.sitePlan') },
+    { key: "vaziyet-plani", label: t('header.navigation.sitePlan') },
     { key: "olanaklar", label: t('header.navigation.amenities') },
     { key: "galeri", label: t('header.navigation.gallery') },
     // { key: "hotel", label: t('header.navigation.hotel') },
     { key: "iletisim", label: t('header.navigation.contact') }
   ];
 
-  const scrolltoHash = function (element_id: string) {
-    const element = document.getElementById(element_id)
-    if (element) {
-      const headerHeight = 80; // Approximate header height
-      const elementPosition = element.offsetTop + headerHeight
-      window.scrollTo({
-        top: elementPosition,
-        behavior: "smooth"
-      });
+  const getNavigationLink = (pageKey: string) => {
+    if (isOnKVKKPage) {
+      // If on KVKK page, navigate to home page with hash
+      const currentLang = pathname?.split('/')[1] || 'tr';
+      return `/${currentLang}#${pageKey}`;
+    } else {
+      // If on home page, use hash link
+      return `#${pageKey}`;
     }
-  }
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleNavClick = (page: string) => {
-    scrolltoHash(page);
-    setIsMenuOpen(false);
   };
 
   return (
@@ -74,11 +77,18 @@ const Header = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-end flex-col gap-[12px]">
           <div className="flex flex-row items-center gap-[12px]">
-            <a onClick={() => scrolltoHash('iletisim')} className="flex flex-row items-center gap-[5px] h-[24px] px-[6px] bg-[#C9B18B] rounded-[8px] cursor-pointer">
-              <Image src={message} alt="message" width={15} height={17} />
+            <Link
+              href={getNavigationLink('iletisim')}
+              className="flex flex-row items-center gap-[5px] h-[24px] p-3 bg-[#C9B18B] rounded-[8px] cursor-pointer"
+            >
+              <Image src={message} alt="message" width={15} height={"17"} />
               <p lang={i18n.language} className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.callUs')}</p>
-            </a>
-            <Link target="_blank" href="https://www.google.com/maps/place/Türkbükü,+Hebil+Cd.+No:156+D:000+00,+48483+Bodrum%2FMuğla/@37.1470123,27.3659852,17z/data=!4m9!1m2!2m1!1sCopyright+©+2025+hebilblue+All+rights+reserved.+Hebil+Blue+Satış+Ofisi+Türkbükü+Mah.+Hebil+Cad.+156+Sk.+Bodrum%2FMUĞLA+%2B90+252+000+00+00!3m5!1s0x14be6ff981187665:0x19b243e1d7730293!8m2!3d37.1470081!4d27.3708561!15sCo0BQ29weXJpZ2h0IMKpIDIwMjUgaGViaWxibHVlIEFsbCByaWdodHMgcmVzZXJ2ZWQuIEhlYmlsIEJsdWUgU2F0xLHFnyBPZmlzaSBUw7xya2LDvGvDvCBNYWguIEhlYmlsIENhZC4gMTU2IFNrLiBCb2RydW0vTVXEnkxBICs5MCAyNTIgMDAwIDAwIDAwkgEQY29tcG91bmRfc2VjdGlvbuABAA?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D" className="flex flex-row items-center gap-[5px] h-[24px] px-[6px] bg-[#08162E] rounded-[8px]">
+            </Link>
+            <Link
+              target="_blank"
+              href={googleLink}
+              className="flex flex-row items-center gap-[5px] h-[24px] px-[6px] bg-[#08162E] rounded-[8px]"
+            >
               <Image src={pin} alt="pin" width={11} height={16} />
               <p lang={i18n.language} className={`${typography.body.small} text-white uppercase`}>{t('header.getDirections')}</p>
             </Link>
@@ -97,7 +107,7 @@ const Header = () => {
           <div className="flex flex-row items-center">
             {pages.map((page, index) => (
               <div key={index} className="flex flex-row items-center cursor-pointer">
-                <a lang={i18n.language} onClick={() => scrolltoHash(page.key)} className={`${typography.body.small} text-white uppercase hover:font-medium`}>{page.label}</a>
+                <Link href={getNavigationLink(page.key)} lang={i18n.language} className={`${typography.body.small} text-white uppercase hover:font-medium`}>{page.label}</Link>
                 {index !== pages.length - 1 && <div className="w-[1px] h-[19px] bg-[#C9B18B] mx-[12px]" />}
               </div>
             ))}
@@ -137,24 +147,25 @@ const Header = () => {
           <div className="flex flex-col space-y-4 sm:space-y-6 flex-1 overflow-y-auto">
             {pages.map((page, index) => (
               <div key={index} className={`border-b border-[#C9B18B]/30 pb-3 sm:pb-4 ${index !== 0 ? 'pt-0' : 'pt-3'}`}>
-                <a 
+                <Link
+                  href={getNavigationLink(page.key)}
                   lang={i18n.language}
-                  onClick={() => handleNavClick(page.key)} 
+                  onClick={() => setIsMenuOpen(false)}
                   className={`${typography.body.regular} text-white uppercase hover:text-[#C9B18B] transition-colors cursor-pointer block py-2`}
                 >
                   {page.label}
-                </a>
+                </Link>
               </div>
             ))}
           </div>
 
           {/* Mobile Action Buttons */}
           <div className="mt-auto space-y-3 sm:space-y-4 pt-4">
-            <Link href="/" className="flex flex-row items-center justify-center gap-[6px] sm:gap-[8px] h-[36px] sm:h-[40px] px-[10px] sm:px-[12px] bg-[#C9B18B] rounded-[8px] w-full">
+            <Link href={getNavigationLink('iletisim')} onClick={() => setIsMenuOpen(false)} className="flex flex-row items-center justify-center gap-[6px] sm:gap-[8px] h-[36px] sm:h-[40px] px-[10px] sm:px-[12px] bg-[#C9B18B] rounded-[8px] w-full">
               <Image src={message} alt="message" width={15} height={17} />
               <p lang={i18n.language} className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.callUs')}</p>
             </Link>
-            <Link target="_blank" href="https://www.google.com/maps/place/Türkbükü,+Hebil+Cd.+No:156+D:000+00,+48483+Bodrum%2FMuğla/@37.1470123,27.3659852,17z/data=!4m9!1m2!2m1!1sCopyright+©+2025+hebilblue+All+rights+reserved.+Hebil+Blue+Satış+Ofisi+Türkbükü+Mah.+Hebil+Cad.+156+Sk.+Bodrum%2FMUĞLA+%2B90+252+000+00+00!3m5!1s0x14be6ff981187665:0x19b243e1d7730293!8m2!3d37.1470081!4d27.3708561!15sCo0BQ29weXJpZ2h0IMKpIDIwMjUgaGViaWxibHVlIEFsbCByaWdodHMgcmVzZXJ2ZWQuIEhlYmlsIEJsdWUgU2F0xLHFnyBPZmlzaSBUw7xya2LDvGvDvCBNYWguIEhlYmlsIENhZC4gMTU2IFNrLiBCb2RydW0vTVXEnkxBICs5MCAyNTIgMDAwIDAwIDAwkgEQY29tcG91bmRfc2VjdGlvbuABAA?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D" className="flex flex-row items-center justify-center gap-[6px] sm:gap-[8px] h-[36px] sm:h-[40px] px-[10px] sm:px-[12px] bg-white rounded-[8px] w-full">
+            <Link target="_blank" href="https://www.google.com/maps/place/Türkbükü,+Hebil+Cd.+No:156+D:000+00,+48483+Bodrum%2FMuğla/@37.1470123,27.3659852,17z/data=!4m9!1m2!2m1!1sCopyright+©+2025+hebilblue+All+rights+reserved.+Hebil+Blue+Satış+Ofisi+Türkbükü+Mah.+Hebil+Cad.+156+Sk.+Bodrum%2FMUĞLA+%2B90+252+000+00+00!3m5!1s0x14be6ff981187665:0x19b243e1d7730293!8m2!3d37.1470081!4d27.3708561!15sCo0BQ29weXJpZ2h0IMKpIDIwMjUgaGViaWxibHVlIEFsbC byaWdodHMgcmVzZXJ2ZWQuIEhlYmlsIEJsdWUgU2F0xLHFnyBPZmlzaSBUw7xya2LDvGvDvCBNYWguIEhlYmlsIEJhZC4gMTU2IFNrLiBCb2RydW0vTVXEnkxBICs5MCAyNTIgMDAwIDAwIDAwkgEQY29tcG91bmRfc2VjdGlvbuABAA?entry=ttu&g_ep=EgoyMDI1MDcyMC4wIKXMDSoASAFQAw%3D%3D" className="flex flex-row items-center justify-center gap-[6px] sm:gap-[8px] h-[36px] sm:h-[40px] px-[10px] sm:px-[12px] bg-white rounded-[8px] w-full">
               <Image src={pin} alt="pin" width={11} height={16} />
               <p lang={i18n.language} className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.getDirections')}</p>
             </Link>

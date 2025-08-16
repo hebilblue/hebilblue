@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useMediaQuery } from 'react-responsive';
 import PhotoItem, { ItemType } from './PhotoItem';
 
 interface PhotoGridProps {
@@ -58,8 +59,10 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({
     }
   };
 
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
   const itemsPerLine = getItemsPerLine(columns);
-  const maxVisibleItems = itemsPerLine * 3; // 3 lines
+  const maxVisibleItems = isMobile ? itemsPerLine * 1 : itemsPerLine * 3; 
   const hasMoreItems = images.length > maxVisibleItems;
   const visibleImages = showAll ? images : images.slice(0, maxVisibleItems);
 
