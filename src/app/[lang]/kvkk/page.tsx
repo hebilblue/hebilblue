@@ -3,6 +3,14 @@ import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import styles from './page.module.css'
 
+// Generate static params for static export
+export async function generateStaticParams() {
+    return [
+        { lang: 'tr' },
+        { lang: 'en' }
+    ]
+}
+
 export default function Page() {
     const { t } = useTranslation()
 
