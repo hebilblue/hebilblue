@@ -332,14 +332,14 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
           <div className="bg-white mt-[-24px] md:mt-0 md:pt-0 px-4 md:px-[96px] pb-[48px] flex flex-col md:flex-row gap-[24px] md:gap-[8px] items-center justify-between w-full" >
             <div className="flex flex-col gap-[16px] md:gap-[8px] order-2 md:order-1">
               <p lang={params.lang} className={textStyles.sectionTitle}>
-                <strong>{t('location.title')}</strong><br />{t('location.subtitle')}
+                <strong>{t('location.title')}</strong>
               </p>
               <p lang={params.lang} className={textStyles.sectionDescription}>
                 {t('location.description')}
               </p>
             </div>
             <button onClick={() => setSelectedItem({ src: kusbakisi2, alt: "kusbakisi2", variant: "normal" })} className="w-full min-w-[50%] md:w-[600px] h-[300px] md:h-[400px] object-cover order-1 md:order-2 cursor-pointer">
-              <Image src={kusbakisi2} alt="kusbakisi2" className="w-full h-full object-cover" />
+              <Image src={kusbakisi2} alt="kusbakisi2" className="w-full h-full object-cover object-right" />
             </button>
           </div>
           <div className="bg-white px-8 md:px-[96px] pb-[48px] flex flex-row flex-wrap md:flex-row gap-[32px] md:gap-[8px] items-center justify-around">
@@ -381,7 +381,7 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
             {t('footer.office')}<br />{t('footer.address')}
           </p>
           <p lang={params.lang} className={textStyles.footerText}>
-            {t('footer.phone')}
+            {t('footer.phone')} - <a href={`mailto:${t('footer.email')}`} className="text-[#242953] underline">{t('footer.email')}</a>
           </p>
         </div>
         <div className="bg-[#242953] flex flex-row items-center justify-between w-full h-[40px]">

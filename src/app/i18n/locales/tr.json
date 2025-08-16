@@ -20,7 +20,7 @@
   },
   "banner": {
     "title": "hebil blue hotel",
-    "description": "Doğanın dingin ritmiyle modern konforu bir araya getiren Hebil Blue; zarif çizgilere sahip modern mimarisi, özenle seçilmiş doğal malzemeleri ve zamansız estetik anlayışıyla öne çıkıyor. Sade lüks konseptiyle, yaşam alanlarınızda ferahlığı ve şıklığı bir arada sunarken; enerji verimliliği sağlayan sürdürülebilir çözümleriyle geleceğe değer katıyor."
+    "description": "Hebil Blue; zarif çizgilere sahip modern mimarisi, özenle seçilmiş doğal malzemeleri ve zamansız estetik anlayışıyla öne çıkıyor. Sade lüks konseptiyle, yaşam alanlarınızda ferahlığı ve şıklığı bir arada sunarken; enerji verimliliği sağlayan sürdürülebilir çözümleriyle geleceğe değer katıyor."
   },
   "banner_2": {
     "title": "hebil blue hotel",
@@ -48,9 +48,8 @@
   "city_dynamics": "ŞEHRİN DİNAMİĞİNE YAKIN, DOĞANIN KALBİNDE.",
   "project_images": "Proje Görselleri",
   "location": {
-    "title": "LOKASYON",
-    "subtitle": "Hebİl Koyu / Türkbükü",
-    "description": "Hem Sakinliğe Yakın, Hem Hayatın İçinde! Doğayla iç içe, huzurlu bir atmosferde yer alırken; Bodrum'un en gözde noktalarına sadece dakikalar mesafedesiniz. Günün dilediğiniz saatinde sahile inin, Yalıkavak Marina'da alışverişe çıkın… Hepsi sadece bir yol kadar yakın!"
+    "title": "HEM SAKİNLİĞE YAKIN, HEM HAYATIN İÇİNDE!",
+    "description": "Doğayla iç içe, huzurlu bir atmosferde yer alırken; Bodrum'un en gözde noktalarına sadece dakikalar mesafedesiniz. Günün dilediğiniz saatinde sahile inin, Yalıkavak Marina'da alışverişe çıkın… Hepsi sadece bir yol kadar yakın!"
   },
   "contact": {
     "title": "Sizi Arayalım",
@@ -60,14 +59,15 @@
     "copyright": "Copyright © 2025 HEBILBLUE All rights reserved.",
     "office": "Hebil Blue Satış Ofisi",
     "address": "Türkbükü Mah. Hebil Cad. 156 Sk. Bodrum/MUĞLA",
-    "phone": "+90 532 635 56 62"
+    "email": "info@hebilblue.com",
+    "phone": "+90 542 789 88 00"
   },
   "locations": {
     "turkbuku": "türkbükü",
     "gundogan": "gündoğan",
     "cennet_koyu": "cennet koyu",
     "yalikavak": "yalıkavak",
-    "airport": "havaalani"
+    "airport": "havaalanı"
   },
   "gallery": {
     "showMore": "Daha Fazla Göster",

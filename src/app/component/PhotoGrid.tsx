@@ -35,7 +35,6 @@ const getWideVariantClass = (columns: number) => {
   }
 };
 
-
 const PhotoGrid: React.FC<PhotoGridProps> = ({
   images,
   columns = 3,
@@ -64,22 +63,53 @@ const PhotoGrid: React.FC<PhotoGridProps> = ({
   const hasMoreItems = images.length > maxVisibleItems;
   const visibleImages = showAll ? images : images.slice(0, maxVisibleItems);
 
+  // Separate videos and images
+  const videos = visibleImages.filter(img => img.variant === 'youtube' || img.variant === 'wide');
+  const imagesOnly = visibleImages.filter(img => img.variant !== 'youtube' && img.variant !== 'wide');
+
   return (
     <div className="space-y-4">
-      <div className={`grid ${getGridCols(columns)} gap-${gap} ${className}`} style={{ gridAutoRows: 'minmax(0, 1fr)' }}>
-        {visibleImages.map((image, index) => (
-          <button
-            key={index}
-            type="button"
-            onClick={() => onClick?.(image)}
-            className={`relative overflow-hidden h-80 ${imageClassName} ${onClick ? 'cursor-pointer' : ''
-              } ${image.variant === 'wide' ? getWideVariantClass(columns) : ''
-              }`}
-          >
-            <PhotoItem image={image} />
-          </button>
-        ))}
-      </div>
+
+      {/* Images Grid - Original layout */}
+      {imagesOnly.length > 0 && (
+        <div className={`grid ${getGridCols(columns)} gap-${gap} ${className}`} style={{ gridAutoRows: 'minmax(0, 1fr)' }}>
+          {imagesOnly.map((image, index) => {
+            // Check if this is a wide image that should start on a new line
+            const isWide = image.variant === 'wide';
+            const shouldStartNewLine = isWide && (index % itemsPerLine !== 0);
+
+            return (
+              <button
+                key={`image-${index}`}
+                type="button"
+                onClick={() => onClick?.(image)}
+                className={`relative overflow-hidden h-80 ${imageClassName} ${onClick ? 'cursor-pointer' : ''
+                  } ${image.variant === 'wide' ? getWideVariantClass(columns) : ''
+                  } ${shouldStartNewLine ? 'col-start-1' : ''}`}
+                style={shouldStartNewLine ? { gridColumn: '1 / -1' } : {}}
+              >
+                <PhotoItem image={image} />
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Videos Grid - 2 per line */}
+      {videos.length > 0 && (
+        <div className={`grid grid-cols-1 md:grid-cols-2 gap-${gap} ${className}`} style={{ gridAutoRows: 'minmax(0, 1fr)' }}>
+          {videos.map((video, index) => (
+            <button
+              key={`video-${index}`}
+              type="button"
+              onClick={() => onClick?.(video)}
+              className={`relative overflow-hidden h-80 ${imageClassName} ${onClick ? 'cursor-pointer' : ''}`}
+            >
+              <PhotoItem image={video} />
+            </button>
+          ))}
+        </div>
+      )}
 
       {hasMoreItems && (
         <div className="flex justify-center">

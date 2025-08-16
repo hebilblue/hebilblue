@@ -42,7 +42,14 @@ const Header = () => {
 
 const scrolltoHash = function (element_id: string) {
   const element = document.getElementById(element_id)
-  element?.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+  if (element) {
+    const headerHeight = 80; // Approximate header height
+    const elementPosition = element.offsetTop - headerHeight;
+    window.scrollTo({
+      top: elementPosition,
+      behavior: "smooth"
+    });
+  }
 }
 
   const toggleMenu = () => {
