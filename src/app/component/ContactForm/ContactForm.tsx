@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ContactForm = () => {
+    const { t } = useTranslation(); 
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -69,7 +71,7 @@ const ContactForm = () => {
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        placeholder="Adınız"
+                        placeholder={t('contactForm.firstName')}
                         required
                         className="w-full h-[40px] bg-[#FFFFFF] rounded-[8px] p-[12px] font-roboto font-regular text-[14px] text-[#393C41]"
                     />
@@ -78,7 +80,7 @@ const ContactForm = () => {
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        placeholder="Soyadınız"
+                        placeholder={t('contactForm.lastName')}
                         required
                         className="w-full h-[40px] bg-[#FFFFFF] rounded-[8px] p-[12px] font-roboto font-regular text-[14px] text-[#393C41]"
                     />
@@ -87,7 +89,7 @@ const ContactForm = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="E-posta"
+                        placeholder={t('contactForm.email')}
                         required
                         className="w-full h-[40px] bg-[#FFFFFF] rounded-[8px] p-[12px] font-roboto font-regular text-[14px] text-[#393C41]"
                     />
@@ -96,7 +98,7 @@ const ContactForm = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Mesajınız"
+                    placeholder={t('contactForm.message')}
                     required
                     rows={4}
                     className="w-full bg-[#FFFFFF] rounded-[8px] p-[12px] font-roboto font-regular text-[14px] text-[#393C41] resize-none"
@@ -107,7 +109,7 @@ const ContactForm = () => {
                 disabled={isSubmitting}
                 className="w-full h-[40px] bg-[#C9B18B] rounded-[8px] font-roboto font-medium text-[14px] text-[#FFFFFF] hover:bg-[#B8A07A] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-                {isSubmitting ? 'Gönderiliyor...' : 'Gönder'}
+                {isSubmitting ? t('contactForm.sending') : t('contactForm.send')}
             </button>
             {submitStatus.type && (
                 <div className={`text-[14px] font-roboto ${submitStatus.type === 'success' ? 'text-green-600' : 'text-red-600'

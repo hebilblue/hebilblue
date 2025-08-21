@@ -15,12 +15,12 @@
   },
   "hero": {
     "title": "Ege Esintileriyle Yeniden Doğuş",
-    "description": "Bodrum’un maviyle taçlanmış en özel koylarından Hebil’de, masmavi denize sadece birkaç adım uzaklıkta, bambaşka bir yaşam sizi bekliyor. Doğanın dingin ritmiyle modern konforu bir araya getiren Hebil Blue; zarif çizgilere sahip modern mimarisi, özenle seçilmiş doğal malzemeleri ve zamansız estetik anlayışıyla öne çıkıyor. Sade lüks konseptiyle, yaşam alanlarınızda ferahlığı ve şıklığı bir arada sunarken; enerji verimliliği sağlayan sürdürülebilir çözümleriyle geleceğe değer katıyor.",
+    "description": "Bodrum’un maviyle taçlanmış en özel koylarından Hebil’de, masmavi denize açılan, kendine ait iskelesi ve plajı olan, bambaşka bir yaşam sizi bekliyor.Doğanın dingin ritmiyle modern konforu bir araya getiren Hebil Blue; zarif çizgilere sahip modern mimarisi, özenle seçilmiş doğal malzemeleri ve zamansız estetik anlayışıyla öne çıkıyor. Sade lüks konseptiyle, yaşam alanlarınızda ferahlığı ve şıklığı bir arada sunarken; enerji verimliliği sağlayan sürdürülebilir çözümleriyle geleceğe değer katıyor.",
     "description_short": "Bodrum Hebil Koyu'nda, denize adım mesafede 80 modern yapıdan oluşan seçkin proje. Ege'nin maviliğine hâkim konumu ve özel iskelesiyle benzersiz bir yaşam sunuyor. Doğayla iç içe, sosyal yaşama yakın ama huzurlu bir ortam."
   },
   "banner": {
     "title": "hebil blue hotel",
-    "description": "Hebil Blue; zarif çizgilere sahip modern mimarisi, özenle seçilmiş doğal malzemeleri ve zamansız estetik anlayışıyla öne çıkıyor. Sade lüks konseptiyle, yaşam alanlarınızda ferahlığı ve şıklığı bir arada sunarken; enerji verimliliği sağlayan sürdürülebilir çözümleriyle geleceğe değer katıyor."
+    "description": "Sade lüks konseptiyle, yaşam alanlarınızda ferahlığı ve şıklığı bir arada sunarken; enerji verimliliği sağlayan sürdürülebilir çözümleriyle geleceğe değer katıyor. Bunu bir alta alabilir misin 2 satır olsun yani burası"
   },
   "banner_2": {
     "title": "hebil blue hotel",
@@ -34,7 +34,7 @@
   "kullanim_alani_description_3": "A tipinde her biri 2 kapalı ve 1 açık olmak üzere toplam 3 araçlık otopark alanı bulunurken,  B tipinde ise 1 kapalı ve 1 açık otopark alanı yer alıyor.",
   "kullanim_alani_description_4": "Bu sayede yalnızca görsel olarak değil, fonksiyonel açıdan da mükemmel bir yaşam alanı sunuluyor.",
   "doga_description_1": "Hebil Blue, sadece bir yaşam alanı değil; her detayı özenle düşünülmüş, dört mevsim keyif sunan özel bir yaşam deneyimidir. Gününüze dingin bir yürüyüşle başlayabilir, özel iskeleden denizin tadını çıkarabilir, ardından spa merkezinde rahatlayabilirsiniz.",
-  "doga_description_2": "Tesis içinde; Restoran & Snack Bar, Fitness & Spa alanları, yürüyüş parkurları & çocuk oyun alanları, tenis kortu ve basketbol sahası, elektrikli araç şarj istasyonları, kapalı ve açık otopark, buggy servis hizmeti, bahçıvanlık & temizlik hizmetleri, deniz suyu desalinasyon sistemi, otel konforunda hizmet anlayışı ve 7/24 güvenlik yer alır.",
+  "doga_description_2": "Tesis içinde; Restoran & Snack Bar, Fitness & Spa alanları, yürüyüş parkurları & çocuk oyun alanları, tenis kortu ve basketbol sahası, elektrikli araç şarj istasyonları, kapalı ve açık otopark, buggy servis hizmeti, bahçıvanlık & temizlik hizmetleri, deniz suyu desalinasyon sistemi, deniz taksi, otel konforunda hizmet anlayışı ve 7/24 güvenlik yer alır.",
   "timeless_architecture": "Zamansız Mİmarİ, eşsİz yaşam alanları",
   "stats": {
     "modern_buildings": "MODERN YAPI",
@@ -73,6 +73,13 @@
     "showMore": "Daha Fazla Göster",
     "showLess": "Daha Az Göster",
     "moreItems": "tane daha"
+  },
+  "contactForm": {
+    "firstName": "Adınız",
+    "lastName": "Soyadınız",
+    "email": "E-posta",
+    "message": "Mesajınız",
+    "send": "Gönder"
   },
   "kvkk": {
     "title": "Kişisel Verilerin Korunması Kanunu (KVKK) Aydınlatma Metni",

@@ -15,12 +15,12 @@
   },
   "hero": {
     "title": "Rebirth with Aegean Breezes",
-    "description": "A new living experience embracing all the colors of nature, just steps away from the sea in Bodrum's Blue Flag Hebil Bay. This prestigious project, consisting of 80 modern structures each with private pools, offers a unique lifestyle with its commanding position over the Aegean blue, panoramic sea views and private pier. While Hebil Bay, surrounded by olive trees and pine forests, offers a privileged living space with its location adjacent to the clarity of Paradise Bay, it promises tranquility away from crowds yet close to Türkbükü's social life. Hebil Blue is designed for those who want to experience Bodrum in all four seasons and redefine life.",
+    "description": "A unique life awaits you in Hebil, one of Bodrum's most special bays crowned with blue, opening to the azure sea with its own pier and beach. Combining nature's tranquil rhythm with modern comfort, Hebil Blue stands out with its elegant modern architecture, carefully selected natural materials, and timeless aesthetic understanding. While offering spaciousness and elegance together in your living spaces with its simple luxury concept, it adds value to the future with its sustainable solutions that provide energy efficiency.",
     "description_short": "A prestigious project consisting of 80 modern structures in Bodrum Hebil Bay, just steps from the sea. It offers a unique lifestyle with its commanding position over the Aegean blue and private pier. A peaceful environment close to social life but immersed in nature."
   },
   "banner": {
     "title": "hebil blue hotel",
-    "description": "Hebil Blue stands out with its elegant modern architecture, carefully selected natural materials, and timeless aesthetic understanding. While offering spaciousness and elegance together in your living spaces with its simple luxury concept, it adds value to the future with its sustainable solutions that provide energy efficiency."
+    "description": "With its simple luxury concept, it offers spaciousness and elegance together in your living spaces; while adding value to the future with its sustainable solutions that provide energy efficiency."
   },
   "banner_2": {
     "title": "hebil blue hotel",
@@ -33,8 +33,8 @@
   "kullanim_alani_description_2": "42 Type A units offer wider and more versatile living spaces with 6+1 and 5+2 options, while 38 Type B units offer comfort and functionality together with a 5+1 plan. Each structure is equipped with its private garden, pool, and spacious verandas, as well as refined details and high-quality materials.",
   "kullanim_alani_description_3": "Type A has a total of 3 parking spaces, 2 covered and 1 open, while Type B has 1 covered and 1 open parking space.",
   "kullanim_alani_description_4": "This way, a perfect living space is offered not only visually but also functionally.",
-  "doga_description_1": "Hebil Blue is not just a living space; it is a special living experience with every detail carefully considered, offering enjoyment in all four seasons. You can start your day with a peaceful walk, enjoy the sea from the private pier, and then relax at the spa center.",
-  "doga_description_2": "The facility includes; Restaurant & Snack Bar, Fitness & Spa areas, walking trails & children's playgrounds, tennis court and basketball court, electric vehicle charging stations, indoor and outdoor parking, buggy service, gardening & cleaning services, seawater desalination system, hotel-comfort service approach and 24/7 security.",
+  "doga_description_1": "Hebil Blue is not just a living space; it is a special life experience with every detail carefully considered, offering enjoyment in all four seasons. You can start your day with a peaceful walk, enjoy the sea from the private pier, and then relax at the spa center.",
+  "doga_description_2": "The facility includes: Restaurant & Snack Bar, Fitness & Spa areas, walking trails & children's playgrounds, tennis court and basketball court, electric vehicle charging stations, indoor and outdoor parking, buggy service, gardening & cleaning services, seawater desalination system, sea taxi, hotel-comfort service approach and 24/7 security.",
   "timeless_architecture": "Timeless Architecture, Unique Living Spaces",
   "stats": {
     "modern_buildings": "MODERN BUILDINGS",
@@ -73,6 +73,14 @@
     "showMore": "Show More",
     "showLess": "Show Less",
     "moreItems": "more"
+  },
+  "contactForm": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Gönder",
+    "sending": "Sending..."
   },
   "kvkk": {
     "title": "Personal Data Protection Law (KVKK) Disclosure Text",
