@@ -13,7 +13,7 @@ const LanguageSwitcher = () => {
     // Extract language from pathname
     if (pathname) {
       const pathLang = pathname.split('/')[1];
-      if (pathLang === 'en' || pathLang === 'tr') {
+      if (pathLang === 'en' || pathLang === 'tr' || pathLang === 'ru') {
         setCurrentLang(pathLang);
       } else {
         setCurrentLang(i18n.language);
@@ -29,7 +29,7 @@ const LanguageSwitcher = () => {
     
     // For static export, we need to handle navigation differently
     const currentPath = pathname || '/';
-    const pathWithoutLang = currentPath.replace(/^\/(tr|en)/, '') || '/';
+    const pathWithoutLang = currentPath.replace(/^\/(tr|en|ru)/, '') || '/';
     const newPath = `/${lng}${pathWithoutLang}`;
     
     // Use window.location for static export
@@ -66,6 +66,18 @@ const LanguageSwitcher = () => {
         style={{ fontVariant: 'normal', textTransform: 'uppercase' }}
       >
         EN
+      </button>
+      <div className="w-px h-4 bg-[#C9B18B]/50"></div>
+      <button
+        onClick={() => changeLanguage('ru')}
+        className={`px-3 py-1 rounded-md text-sm font-medium transition-all duration-200 font-roboto cursor-pointer ${
+          currentLang === 'ru'
+            ? 'bg-[#C9B18B] text-[#08162E]'
+            : 'bg-transparent text-white hover:bg-white/10'
+        }`}
+        style={{ fontVariant: 'normal', textTransform: 'uppercase' }}
+      >
+        RU
       </button>
     </div>
   );

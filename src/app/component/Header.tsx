@@ -92,7 +92,7 @@ const Header = () => {
               <Image src={pin} alt="pin" width={11} height={16} />
               <p lang={i18n.language} className={`${typography.body.small} text-white uppercase`}>{t('header.getDirections')}</p>
             </Link>
-            <Link href={i18n.language === "tr" ? "/katalog_tr.pdf" : "/katalog_en.pdf"} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center gap-[5px] h-[24px] px-[6px] bg-[#08162E] rounded-[8px]">
+            <Link href={i18n.language === "tr" ? "/katalog_tr.pdf" : i18n.language === "ru" ? "/katalog_ru.pdf" : "/katalog_en.pdf"} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center gap-[5px] h-[24px] px-[6px] bg-[#08162E] rounded-[8px]">
               <Image src={folder} alt="folder" width={17} height={17} />
               <p lang={i18n.language} className={`${typography.body.small} text-white uppercase`}>{t('header.projectCatalog')}</p>
             </Link>
@@ -169,7 +169,7 @@ const Header = () => {
               <Image src={pin} alt="pin" width={11} height={16} />
               <p lang={i18n.language} className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.getDirections')}</p>
             </Link>
-            <Link href={i18n.language === "tr" ? "/katalog_tr.pdf" : "/katalog_en.pdf"} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center justify-center gap-[6px] sm:gap-[8px] h-[36px] sm:h-[40px] px-[10px] sm:px-[12px] bg-white rounded-[8px] w-full">
+            <Link href={i18n.language === "tr" ? "/katalog_tr.pdf" : i18n.language === "ru" ? "/katalog_ru.pdf" : "/katalog_en.pdf"} target="_blank" rel="noopener noreferrer" className="flex flex-row items-center justify-center gap-[6px] sm:gap-[8px] h-[36px] sm:h-[40px] px-[10px] sm:px-[12px] bg-white rounded-[8px] w-full">
               <Image src={folder} alt="folder" width={17} height={17} />
               <p lang={i18n.language} className={`${typography.body.small} text-[#08162E] uppercase`}>{t('header.projectCatalog')}</p>
             </Link>
