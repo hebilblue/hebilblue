@@ -6,9 +6,9 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Next.js build output
-.nextck
 .next/
 out/
+.vercel/
 
 # Logs
 logs/
@@ -36,6 +36,9 @@ Thumbs.db
 # Optional: ignore production build if not needed
 build/
 dist/
+
+# TypeScript
+*.tsbuildinfo
 
 # Git-ignored deployment artifacts
 *.tar.gz
