@@ -79,7 +79,8 @@
     "lastName": "Soyadınız",
     "email": "E-posta",
     "message": "Mesajınız",
-    "send": "Gönder"
+    "send": "Gönder",
+    "sending": "Gönderiliyor..."
   },
   "kvkk": {
     "title": "Kişisel Verilerin Korunması Kanunu (KVKK) Aydınlatma Metni",
