@@ -48,70 +48,72 @@ import gallery_24 from "../assets/gallery/iskele/2.webp"
 import gallery_25 from "../assets/gallery/iskele/3.webp"
 import gallery_26 from "../assets/gallery/iskele/4.webp"
 
-const slider_images_1 = [
-  <Image src={slider1_1} alt="Slider 1" key="slider1_1" className="w-full md:w-full h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
-  <Image src={slider1_2} alt="Slider 2" key="slider1_2" className="w-full md:w-full h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
-  <Image src={slider1_3} alt="Slider 3" key="slider1_3" className="w-full md:w-full h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
-  <Image src={slider1_4} alt="Slider 4" key="slider1_4" className="w-full md:w-full h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
-]
+const key = (index: number, variant: string) => `slider-${index}-${variant}`
 
-// Slider 1 image sources for context
-const slider1Sources = [
-  { src: slider1_1, alt: "Slider 1", variant: "normal" as const },
-  { src: slider1_2, alt: "Slider 2", variant: "normal" as const },
-  { src: slider1_3, alt: "Slider 3", variant: "normal" as const },
-  { src: slider1_4, alt: "Slider 4", variant: "normal" as const },
+const heroClassName = "w-full h-[300px] md:h-[600px] object-cover transition-transform duration-700 ease-in-out hover:scale-110"
+const sliderClassName = "w-full md:w-full h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110"
+
+const slider_images_1 = [
+  <Image src={slider1_1} alt="Slider 1" key={key(0, "slider1")} className={sliderClassName} />,
+  <Image src={slider1_2} alt="Slider 2" key={key(1, "slider1")} className={sliderClassName} />,
+  <Image src={slider1_3} alt="Slider 3" key={key(2, "slider1")} className={sliderClassName} />,
+  <Image src={slider1_4} alt="Slider 4" key={key(3, "slider1")} className={sliderClassName} />,
 ]
 
 const slider_images_2 = [
-  <Image src={slider2_1} alt="Slider 1" key="slider2_1" className="w-full md:w-full h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
-  <Image src={slider2_2} alt="Slider 2" key="slider2_2" className="w-full md:w-full h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
-  <Image src={slider2_3} alt="Slider 3" key="slider2_3" className="w-full md:w-full h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
-  <Image src={slider2_4} alt="Slider 4" key="slider2_4" className="w-full md:w-full h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110" />,
+  <Image src={slider2_1} alt="Slider 1" key={key(0, "slider2")} className={sliderClassName} />,
+  <Image src={slider2_2} alt="Slider 2" key={key(1, "slider2")} className={sliderClassName} />,
+  <Image src={slider2_3} alt="Slider 3" key={key(2, "slider2")} className={sliderClassName} />,
+  <Image src={slider2_4} alt="Slider 4" key={key(3, "slider2")} className={sliderClassName} />,
 ]
 
-const slider2Sources = [
-  { src: slider2_1, alt: "Slider 1", variant: "normal" as const },
-  { src: slider2_2, alt: "Slider 2", variant: "normal" as const },
-  { src: slider2_3, alt: "Slider 3", variant: "normal" as const },
-  { src: slider2_4, alt: "Slider 4", variant: "normal" as const },
-]
-
-// Hero carousel images
 const heroCarouselImages = [
   <Image
     src={hero_1}
-    alt="Hero Image"
+    alt="hero-1"
     key="hero-1"
-    className="w-full h-[300px] md:h-[600px] object-cover transition-transform duration-700 ease-in-out hover:scale-110"
+    className={heroClassName}
   />,
   <Image
     src={hero_2}
-    alt="Hero Banner"
+    alt="hero-2"
     key="hero-2"
-    className="w-full h-[300px] md:h-[600px] object-cover transition-transform duration-700 ease-in-out hover:scale-110"
+    className={heroClassName}
   />,
   <Image
     src={hero_3}
-    alt="Bird's Eye View"
+    alt="hero-3"
     key="hero-3"
-    className="w-full h-[300px] md:h-[600px] object-cover transition-transform duration-700 ease-in-out hover:scale-110"
+    className={heroClassName}
   />,
   <Image
     src={hero_4}
-    alt="Bird's Eye View 2"
+    alt="hero-4"
     key="hero-4"
-    className="w-full h-[300px] md:h-[600px] object-cover transition-transform duration-700 ease-in-out hover:scale-110"
+    className={heroClassName}
   />,
   <Image
     src={hero_5}
-    alt="Bird's Eye View 2"
+    alt="herro-5"
     key="hero-5"
-    className="w-full h-[300px] md:h-[600px] object-cover transition-transform duration-700 ease-in-out hover:scale-110"
+    className={heroClassName}
   />,
 ]
 
-// Hero carousel image sources for context
+const slider1Sources = [
+  { src: slider1_1, alt: "slider-1-1", variant: "normal" as const },
+  { src: slider1_2, alt: "slider-1-2", variant: "normal" as const },
+  { src: slider1_3, alt: "slider-1-3", variant: "normal" as const },
+  { src: slider1_4, alt: "slider-1-4", variant: "normal" as const },
+]
+
+const slider2Sources = [
+  { src: slider2_1, alt: "slider-2-1", variant: "normal" as const },
+  { src: slider2_2, alt: "slider-2-2", variant: "normal" as const },
+  { src: slider2_3, alt: "slider-2-3", variant: "normal" as const },
+  { src: slider2_4, alt: "slider-2-4", variant: "normal" as const },
+]
+
 const heroCarouselSources = [
   { src: hero_1, alt: "Hero Image", variant: "normal" as const },
   { src: hero_2, alt: "Hero Banner", variant: "normal" as const },
@@ -120,23 +122,22 @@ const heroCarouselSources = [
   { src: hero_5, alt: "Bird's Eye View 2", variant: "normal" as const },
 ]
 
-// Example photo grid data with wide variant
 const photoGridImages = [
-  { src: gallery_1, alt: "Hebil Blue Gallery_1", variant: 'normal' as const },
-  { src: gallery_2, alt: "Hebil Blue Gallery_2", variant: 'normal' as const },
-  { src: gallery_3, alt: "Hebil Blue Gallery_3", variant: 'normal' as const },
-  { src: gallery_4, alt: "Hebil Blue Gallery_4", variant: 'normal' as const },
-  { src: gallery_5, alt: "Hebil Blue Gallery_5", variant: 'normal' as const },
-  { src: gallery_6, alt: "Hebil Blue Gallery_6", variant: 'normal' as const },
-  { src: gallery_7, alt: "Hebil Blue Gallery_7", variant: 'normal' as const },
-  { src: gallery_8, alt: "Hebil Blue Gallery_8", variant: 'normal' as const },
-  { src: gallery_23, alt: "Hebil Blue Gallery_23", variant: 'normal' as const },
-  { src: gallery_24, alt: "Hebil Blue Gallery_24", variant: 'normal' as const },
-  { src: gallery_25, alt: "Hebil Blue Gallery_25", variant: 'normal' as const },
-  { src: gallery_26, alt: "Hebil Blue Gallery_26", variant: 'normal' as const },
-  { src: vaziyetPlan, alt: "Vaziyet Planı", variant: 'normal' as const },
-  { src: "https://www.youtube.com/embed/tKicQIvFElM", alt: "Hebil Blue Video_1", variant: 'wide' as const },
-  { src: "https://www.youtube.com/embed/WV8Mgz7qC8U", alt: "Hebil Blue Video_2", variant: 'wide' as const },
+  { src: gallery_1, alt: "Hebil_Blue_Gallery_1", variant: 'normal' as const },
+  { src: gallery_2, alt: "Hebil_Blue_Gallery_2", variant: 'normal' as const },
+  { src: gallery_3, alt: "Hebil_Blue_Gallery_3", variant: 'normal' as const },
+  { src: gallery_4, alt: "Hebil_Blue_Gallery_4", variant: 'normal' as const },
+  { src: gallery_5, alt: "Hebil_Blue_Gallery_5", variant: 'normal' as const },
+  { src: gallery_6, alt: "Hebil_Blue_Gallery_6", variant: 'normal' as const },
+  { src: gallery_7, alt: "Hebil_Blue_Gallery_7", variant: 'normal' as const },
+  { src: gallery_8, alt: "Hebil_Blue_Gallery_8", variant: 'normal' as const },
+  { src: gallery_23, alt: "Hebil_Blue_Gallery_23", variant: 'normal' as const },
+  { src: gallery_24, alt: "Hebil_Blue_Gallery_24", variant: 'normal' as const },
+  { src: gallery_25, alt: "Hebil_Blue_Gallery_25", variant: 'normal' as const },
+  { src: gallery_26, alt: "Hebil_Blue_Gallery_26", variant: 'normal' as const },
+  { src: vaziyetPlan, alt: "Vaziyet_Plani", variant: 'normal' as const },
+  { src: "https://www.youtube.com/embed/tKicQIvFElM", alt: "Hebil_Blue_Video_1", variant: 'wide' as const },
+  { src: "https://www.youtube.com/embed/WV8Mgz7qC8U", alt: "Hebil_Blue_Video_2", variant: 'wide' as const },
 ];
 
 export default function HomeClient({ params }: { params: { lang: string } }) {
@@ -152,15 +153,14 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
     { name: t('locations.airport'), distance: 40 },
   ]
 
-  // Set language from URL parameter
   useEffect(() => {
     if (params.lang && i18n.language !== params.lang) {
       i18n.changeLanguage(params.lang);
     }
-  }, [params.lang, i18n]);
-
-
-
+  }, [
+    params.lang,
+    i18n
+  ]);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -210,7 +210,6 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
     setSelectedItem(sources[index]);
   }, [setSelectedItem])
 
-
   return (
     <>
       <PhotoModal />
@@ -224,7 +223,11 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
             <p lang={params.lang} className={textStyles.heroDescription}>{t('hero.description')}</p>
             {/* <p className={textStyles.heroDescriptionShort}>{t('hero.description_short')}</p> */}
           </HeroSection>
-          <button onClick={() => setSelectedItem({ src: otelNew, alt: "BANNER_HOTEL", variant: "normal" })} className="overflow-hidden w-full h-[300px] md:h-[600px] lg:h-[700px] xl:h-[800px] 2xl:h-[900px] cursor-pointer" id="hotel">
+          <button
+            id="hotel"
+            onClick={() => setSelectedItem({ src: otelNew, alt: "BANNER_HOTEL", variant: "normal" as const })}
+            className="overflow-hidden w-full h-[300px] md:h-[600px] lg:h-[700px] xl:h-[800px] 2xl:h-[900px] cursor-pointer"
+          >
             <Image src={otelNew} alt="BANNER_HOTEL" className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-110" />
           </button>
           <HeroSection id="proje">
@@ -251,13 +254,13 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
                 {t('timeless_architecture')}
               </p>
             </CarouselSection>
-            <div className="flex flex-col-reverse md:flex-col gap-4 md:gap-0">
+            <div className="flex flex-col-reverse md:flex-col gap-4 md:gap-0" id="vaziyet-plani">
               <div className="p-0 md:p-[24px] pb-[18px] md:pb-[56px]">
                 <p lang={params.lang} className={textStyles.sectionDescription}>
                   {t('zamansiz_mimari_description')}
                 </p>
               </div>
-              <div className="p-0 md:p-[24px] flex flex-wrap flex-row md:flex-row gap-[24px] w-full bg-white" id="vaziyet planı">
+              <div className="p-0 md:p-[24px] flex flex-wrap flex-row md:flex-row gap-[24px] w-full bg-white">
                 <StatItem lang={params.lang} title={t('stats.modern_buildings')} value={80} suffix={t('stats.units')} />
                 <StatItem lang={params.lang} title={t('stats.project_area')} value={30000} suffix={t('stats.square_meters')} />
                 <StatItem lang={params.lang} title={t('stats.pier')} value={1400} suffix={t('stats.square_meters')} />

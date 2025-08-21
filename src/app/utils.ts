@@ -55,3 +55,4 @@ export const serviceItems = [
   { slug: 'sarj-istasyonu', name: { tr: 'Sarj İstasyonu', en: 'Charging Station' } },
   { slug: 'fitness-ve-spa', name: { tr: 'Fitness ve SPA', en: 'Fitness and SPA' } },
 ];
+
