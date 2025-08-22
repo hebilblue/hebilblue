@@ -37,25 +37,37 @@ export const svgFiles: Record<string, string> = {
 // Array of service items
 export const serviceItems = [
   // { slug: 'otel', name: 'Otel' },
-  { slug: 'konsiyerj', name: { tr: 'Konsiyerj', en: 'Concierge' } },
-  { slug: 'buggy-hizmeti', name: { tr: 'Buggy Hizmeti', en: 'Buggy Service' } },
-  { slug: 'destek-hizmetleri', name: { tr: 'Destek Hizmetleri', en: 'Support Services' } },
-  { slug: 'otopark', name: { tr: 'Otopark', en: 'Parking' } },
-  { slug: 'desalinasyon-sistemi', name: { tr: 'Desalinasyon Sistemi', en: 'Desalination System' } },
+  { slug: 'konsiyerj', name: { tr: 'Konsiyerj', en: 'Concierge', ru: 'Консьерж' } },
+  { slug: 'buggy-hizmeti', name: { tr: 'Buggy Hizmeti', en: 'Buggy Service', ru: 'Сервис багги' } },
+  {
+    slug: 'destek-hizmetleri',
+    name: { tr: 'Destek Hizmetleri', en: 'Support Services', ru: 'Сервис поддержки' },
+  },
+  { slug: 'otopark', name: { tr: 'Otopark', en: 'Parking', ru: 'Парковка' } },
+  {
+    slug: 'desalinasyon-sistemi',
+    name: { tr: 'Desalinasyon Sistemi', en: 'Desalination System', ru: 'Система дезалин' },
+  },
   {
     slug: 'restoran-ve-snack-bar',
-    name: { tr: 'Restoran ve Snack Bar', en: 'Restaurant and Snack Bar' },
+    name: { tr: 'Restoran ve Snack Bar', en: 'Restaurant and Snack Bar', ru: 'Ресторан и бар' },
   },
-  { slug: 'spor-alanlari', name: { tr: 'Spor Alanları', en: 'Sports Areas' } },
+  { slug: 'spor-alanlari', name: { tr: 'Spor Alanları', en: 'Sports Areas', ru: 'Спорт-зона' } },
   {
     slug: 'yuruyus-ve-oyun-alanlari',
-    name: { tr: 'Yürüyüş ve Oyun Alanları', en: 'Walking and Play Areas' },
+    name: { tr: 'Yürüyüş ve Oyun Alanları', en: 'Walking and Play Areas', ru: 'Пешеходная зона' },
   },
-  { slug: 'ozel-iskele', name: { tr: 'Özel İskele', en: 'Private Dock' } },
-  { slug: 'ozel-havuz', name: { tr: 'Özel Havuz', en: 'Private Pool' } },
-  { slug: 'guvenlik', name: { tr: 'Güvenlik', en: 'Security' } },
-  { slug: 'sarj-istasyonu', name: { tr: 'Sarj İstasyonu', en: 'Charging Station' } },
-  { slug: 'fitness-ve-spa', name: { tr: 'Fitness ve SPA', en: 'Fitness and SPA' } },
-  { slug: 'deniz-taksi', name: { tr: 'Deniz Taksi', en: 'Sea Taxi' } },
+  { slug: 'ozel-iskele', name: { tr: 'Özel İskele', en: 'Private Dock', ru: 'Приватный док' } },
+  { slug: 'ozel-havuz', name: { tr: 'Özel Havuz', en: 'Private Pool', ru: 'Приватный бассейн' } },
+  { slug: 'guvenlik', name: { tr: 'Güvenlik', en: 'Security', ru: 'Безопасность' } },
+  {
+    slug: 'sarj-istasyonu',
+    name: { tr: 'Sarj İstasyonu', en: 'Charging Station', ru: 'Зарядная станция' },
+  },
+  {
+    slug: 'fitness-ve-spa',
+    name: { tr: 'Fitness ve SPA', en: 'Fitness and SPA', ru: 'Фитнес и SPA' },
+  },
+  { slug: 'deniz-taksi', name: { tr: 'Deniz Taksi', en: 'Sea Taxi', ru: 'Транспорт по воде' } },
 ];
 

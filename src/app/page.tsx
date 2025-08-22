@@ -8,8 +8,17 @@ export default function RootPage() {
   const router = useRouter();
 
   useEffect(() => {
-    // Redirect to default language (Turkish)
-    router.replace('/tr');
+    // Detect user's preferred language
+    const userLang = navigator.language || navigator.languages?.[0] || 'tr';
+    let targetLang = 'tr'; // default to Turkish
+    
+    if (userLang.startsWith('ru')) {
+      targetLang = 'ru';
+    } else if (userLang.startsWith('en')) {
+      targetLang = 'en';
+    }
+    
+    router.replace(`/${targetLang}`);
   }, [router]);
 
   return (

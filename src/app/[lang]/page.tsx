@@ -4,7 +4,8 @@ import HomeClient from './HomeClient';
 export function generateStaticParams() {
   return [
     { lang: 'tr' },
-    { lang: 'en' }
+    { lang: 'en' },
+    { lang: 'ru' }
   ];
 }
 

@@ -5,7 +5,8 @@ import styles from './page.module.css'
 export async function generateStaticParams() {
     return [
         { lang: 'tr' },
-        { lang: 'en' }
+        { lang: 'en' },
+        { lang: 'ru' }
     ]
 }
 
