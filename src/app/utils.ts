@@ -1,5 +1,6 @@
 // Import SVG files
 import buggyHizmetiSvg from './assets/svg/buggy-hizmeti.svg';
+import denizTaksiSvg from './assets/svg/deniz-taksi.svg';
 import desalinasyonSistemiSvg from './assets/svg/desalinasyon-sistemi.svg';
 import destekHizmetleriSvg from './assets/svg/destek-hizmetleri.svg';
 import fitnessVeSpaSvg from './assets/svg/fitness-ve-spa.svg';
@@ -30,6 +31,7 @@ export const svgFiles: Record<string, string> = {
   guvenlik: guvenlikSvg,
   'restoran-ve-snack-bar': restoranVeSnackBarSvg,
   'spor-alanlari': sporAlanlariSvg,
+  'deniz-taksi': denizTaksiSvg,
 };
 
 // Array of service items
@@ -66,5 +68,6 @@ export const serviceItems = [
     slug: 'fitness-ve-spa',
     name: { tr: 'Fitness ve SPA', en: 'Fitness and SPA', ru: 'Фитнес и SPA' },
   },
+  { slug: 'deniz-taksi', name: { tr: 'Deniz Taksi', en: 'Sea Taxi', ru: 'Транспорт по воде' } },
 ];
 

@@ -4,7 +4,6 @@ import { useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import doga from "../assets/doga.webp"
 import kusbakisi2 from "../assets/kusbakisi_2.webp"
-import kusbakisi3 from "../assets/kusbakisi_3.webp"
 import otelNew from "../assets/otel-new.webp"
 import vaziyetPlan from "../assets/vaziyet-plani.webp"
 import { KVKKAlert, PhotoGrid } from "../component"
@@ -33,20 +32,20 @@ import hero_3 from "../assets/hero-slider/hero-slider-3.webp"
 import hero_4 from "../assets/hero-slider/hero-slider-4.webp"
 import hero_5 from "../assets/hero-slider/hero-slider-5.webp"
 
-import gallery_1 from "../assets/gallery/dis-mekan/1.webp"
-import gallery_4 from "../assets/gallery/dis-mekan/11.webp"
-import gallery_2 from "../assets/gallery/dis-mekan/3.webp"
-import gallery_3 from "../assets/gallery/dis-mekan/9.webp"
+import gallery_1 from "../assets/gallery/gallery_01.webp"
+import gallery_2 from "../assets/gallery/gallery_02.webp"
+import gallery_3 from "../assets/gallery/gallery_03.webp"
+import gallery_4 from "../assets/gallery/gallery_04.webp"
+import gallery_5 from "../assets/gallery/gallery_05.webp"
+import gallery_6 from "../assets/gallery/gallery_06.webp"
+import gallery_7 from "../assets/gallery/gallery_07.webp"
+import gallery_8 from "../assets/gallery/gallery_08.webp"
+import gallery_9 from "../assets/gallery/gallery_09.webp"
+import gallery_10 from "../assets/gallery/gallery_10.webp"
+import gallery_11 from "../assets/gallery/gallery_11.webp"
+import gallery_12 from "../assets/gallery/gallery_12.webp"
 
-import gallery_5 from "../assets/gallery/ic-mekan/2.webp"
-import gallery_6 from "../assets/gallery/ic-mekan/4.webp"
-import gallery_7 from "../assets/gallery/ic-mekan/5.webp"
-import gallery_8 from "../assets/gallery/ic-mekan/9.webp"
-
-import gallery_23 from "../assets/gallery/iskele/1.webp"
-import gallery_24 from "../assets/gallery/iskele/2.webp"
-import gallery_25 from "../assets/gallery/iskele/3.webp"
-import gallery_26 from "../assets/gallery/iskele/4.webp"
+import google_earth_location from "../assets/google-earth.webp"
 
 const key = (index: number, variant: string) => `slider-${index}-${variant}`
 
@@ -54,8 +53,8 @@ const heroClassName = "w-full h-[300px] md:h-[600px] object-cover transition-tra
 const sliderClassName = "w-full md:w-full h-[300px] md:h-[400px] object-cover transition-transform duration-700 ease-in-out hover:scale-110"
 
 const slider_images_1 = [
-  <Image src={slider1_1} alt="Slider 1" key={key(0, "slider1")} className={sliderClassName} />,
   <Image src={slider1_2} alt="Slider 2" key={key(1, "slider1")} className={sliderClassName} />,
+  <Image src={slider1_1} alt="Slider 1" key={key(0, "slider1")} className={sliderClassName} />,
   <Image src={slider1_3} alt="Slider 3" key={key(2, "slider1")} className={sliderClassName} />,
   <Image src={slider1_4} alt="Slider 4" key={key(3, "slider1")} className={sliderClassName} />,
 ]
@@ -101,8 +100,8 @@ const heroCarouselImages = [
 ]
 
 const slider1Sources = [
-  { src: slider1_1, alt: "slider-1-1", variant: "normal" as const },
   { src: slider1_2, alt: "slider-1-2", variant: "normal" as const },
+  { src: slider1_1, alt: "slider-1-1", variant: "normal" as const },
   { src: slider1_3, alt: "slider-1-3", variant: "normal" as const },
   { src: slider1_4, alt: "slider-1-4", variant: "normal" as const },
 ]
@@ -131,11 +130,10 @@ const photoGridImages = [
   { src: gallery_6, alt: "Hebil_Blue_Gallery_6", variant: 'normal' as const },
   { src: gallery_7, alt: "Hebil_Blue_Gallery_7", variant: 'normal' as const },
   { src: gallery_8, alt: "Hebil_Blue_Gallery_8", variant: 'normal' as const },
-  { src: gallery_23, alt: "Hebil_Blue_Gallery_23", variant: 'normal' as const },
-  { src: gallery_24, alt: "Hebil_Blue_Gallery_24", variant: 'normal' as const },
-  { src: gallery_25, alt: "Hebil_Blue_Gallery_25", variant: 'normal' as const },
-  { src: gallery_26, alt: "Hebil_Blue_Gallery_26", variant: 'normal' as const },
-  { src: vaziyetPlan, alt: "Vaziyet_Plani", variant: 'normal' as const },
+  { src: gallery_9, alt: "Hebil_Blue_Gallery_9", variant: 'normal' as const },
+  { src: gallery_10, alt: "Hebil_Blue_Gallery_10", variant: 'normal' as const },
+  { src: gallery_11, alt: "Hebil_Blue_Gallery_11", variant: 'normal' as const },
+  { src: gallery_12, alt: "Hebil_Blue_Gallery_12", variant: 'normal' as const },
   { src: "https://www.youtube.com/embed/tKicQIvFElM", alt: "Hebil_Blue_Video_1", variant: 'wide' as const },
   { src: "https://www.youtube.com/embed/WV8Mgz7qC8U", alt: "Hebil_Blue_Video_2", variant: 'wide' as const },
 ];
@@ -231,8 +229,10 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
             <Image src={otelNew} alt="BANNER_HOTEL" className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-110" />
           </button>
           <HeroSection id="proje">
-            {/* <h1 className={textStyles.heroTitle}>{t('banner.title')}</h1> */}
-            <p lang={params.lang} className={textStyles.heroDescription}>{t('banner.description')}</p>
+            <div>
+              <p lang={params.lang} className={`${textStyles.heroDescription}`}>{t('banner.description_first_line')}</p>
+              <p lang={params.lang} className={`${textStyles.heroDescription}`}>{t('banner.description_second_line')}</p>
+            </div>
           </HeroSection>
           <div className="px-4 md:px-[96px] bg-white">
             <CarouselSection
@@ -253,13 +253,11 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
               <p lang={params.lang} className={textStyles.sectionTitle}>
                 {t('timeless_architecture')}
               </p>
+              <p lang={params.lang} className={textStyles.sectionDescription}>
+                {t('zamansiz_mimari_description')}
+              </p>
             </CarouselSection>
             <div className="flex flex-col-reverse md:flex-col gap-4 md:gap-0" id="vaziyet-plani">
-              <div className="p-0 md:p-[24px] pb-[18px] md:pb-[56px]">
-                <p lang={params.lang} className={textStyles.sectionDescription}>
-                  {t('zamansiz_mimari_description')}
-                </p>
-              </div>
               <div className="p-0 md:p-[24px] flex flex-wrap flex-row md:flex-row gap-[24px] w-full bg-white">
                 <StatItem lang={params.lang} title={t('stats.modern_buildings')} value={80} suffix={t('stats.units')} />
                 <StatItem lang={params.lang} title={t('stats.project_area')} value={30000} suffix={t('stats.square_meters')} />
@@ -367,8 +365,8 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between w-full bg-[#242953]">
           <div className="relative w-full md:w-[50%] h-[300px] md:h-[400px] bg-[#242953]">
-            <Image src={kusbakisi3} alt="kusbakisi3" className="w-full h-full object-cover" />
-            <div className="bg-[#FFFFFF] w-full h-full absolute left-0 top-0 opacity-50" />
+            <Image src={google_earth_location} alt="google_earth_location" className="w-full h-full object-cover" />
+            <div className="bg-[#FFFFFF] w-full h-full absolute left-0 top-0 opacity-20" />
           </div>
           <div className="relative w-full md:w-[50%] flex flex-col justify-center items-center h-full bg-[#242953] p-[24px]" id="iletisim">
             <p lang={params.lang} className={textStyles.contactTitle}>{t('contact.title')}</p>
