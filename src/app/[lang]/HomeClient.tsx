@@ -342,7 +342,7 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
               </p>
             </div>
             <button onClick={() => setSelectedItem({ src: kusbakisi2, alt: "kusbakisi2", variant: "normal" })} className="w-full min-w-[50%] md:w-[600px] h-[300px] md:h-[400px] object-cover order-1 md:order-2 cursor-pointer">
-              <Image src={kusbakisi2} alt="kusbakisi2" className="w-full h-full object-cover object-right" />
+              <Image src={google_earth_location} alt="google_earth_location" className="w-full h-full object-cover" />
             </button>
           </div>
           <div className="bg-white px-8 md:px-[96px] pb-[48px] flex flex-row flex-wrap md:flex-row gap-[32px] md:gap-[8px] items-center justify-around">
