@@ -229,8 +229,10 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
             <Image src={otelNew} alt="BANNER_HOTEL" className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-110" />
           </button>
           <HeroSection id="proje">
-            {/* <h1 className={textStyles.heroTitle}>{t('banner.title')}</h1> */}
-            <p lang={params.lang} className={textStyles.heroDescription}>{t('banner.description')}</p>
+            <div>
+              <p lang={params.lang} className={`${textStyles.heroDescription}`}>{t('banner.description_first_line')}</p>
+              <p lang={params.lang} className={`${textStyles.heroDescription}`}>{t('banner.description_second_line')}</p>
+            </div>
           </HeroSection>
           <div className="px-4 md:px-[96px] bg-white">
             <CarouselSection

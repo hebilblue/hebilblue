@@ -20,7 +20,8 @@
   },
   "banner": {
     "title": "hebil blue hotel",
-    "description": "Sade lüks konseptiyle, yaşam alanlarınızda ferahlığı ve şıklığı bir arada sunarken; enerji verimliliği sağlayan sürdürülebilir çözümleriyle geleceğe değer katıyor. Bunu bir alta alabilir misin 2 satır olsun yani burası"
+    "description_first_line": "Hebil Blue; zarif çizgilere sahip modern mimarisi, özenle seçilmiş doğal malzemeleri ve zamansız estetik anlayışıyla öne çıkıyor.",
+    "description_second_line": "Sade lüks konseptiyle, yaşam alanlarınızda ferahlığı ve şıklığı bir arada sunarken; enerji verimliliği sağlayan sürdürülebilir çözümleriyle geleceğe değer katıyor."
   },
   "banner_2": {
     "title": "hebil blue hotel",
