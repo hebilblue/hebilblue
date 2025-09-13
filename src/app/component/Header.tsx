@@ -42,7 +42,7 @@ const Header = () => {
   const pages = [
     { key: "hebilblue", label: t('header.navigation.hebilblue') },
     { key: "proje", label: t('header.navigation.project') },
-    { key: "vaziyet-plani", label: t('header.navigation.sitePlan') },
+    // { key: "vaziyet-plani", label: t('header.navigation.sitePlan') },
     { key: "olanaklar", label: t('header.navigation.amenities') },
     { key: "galeri", label: t('header.navigation.gallery') },
     // { key: "hotel", label: t('header.navigation.hotel') },

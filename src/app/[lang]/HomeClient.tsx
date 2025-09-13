@@ -7,7 +7,6 @@ import kusbakisi2 from "../assets/kusbakisi_2.webp"
 import otelNew from "../assets/otel-new.webp"
 import vaziyetPlan from "../assets/vaziyet-plani.webp"
 import { KVKKAlert, PhotoGrid } from "../component"
-import Carousel from "../component/Carousel"
 import { MapComponent } from "../component/map"
 import { CarouselSection, HeroSection } from "../layout/index"
 import { textStyles } from "../styles/typography"
@@ -27,10 +26,6 @@ import StatItem from "../component/StatItem"
 import { useSelectedItem } from "../context/SelectedItemContext"
 
 import hero_1 from "../assets/hero-slider/hero-slider-1.webp"
-import hero_2 from "../assets/hero-slider/hero-slider-2.webp"
-import hero_3 from "../assets/hero-slider/hero-slider-3.webp"
-import hero_4 from "../assets/hero-slider/hero-slider-4.webp"
-import hero_5 from "../assets/hero-slider/hero-slider-5.webp"
 
 import gallery_1 from "../assets/gallery/gallery_01.webp"
 import gallery_2 from "../assets/gallery/gallery_02.webp"
@@ -44,6 +39,7 @@ import gallery_9 from "../assets/gallery/gallery_09.webp"
 import gallery_10 from "../assets/gallery/gallery_10.webp"
 import gallery_11 from "../assets/gallery/gallery_11.webp"
 import gallery_12 from "../assets/gallery/gallery_12.webp"
+import manzara from "../assets/manzara.png"
 
 import google_earth_location from "../assets/google-earth.webp"
 
@@ -56,7 +52,7 @@ const slider_images_1 = [
   <Image src={slider1_2} alt="Slider 2" key={key(1, "slider1")} className={sliderClassName} />,
   <Image src={slider1_1} alt="Slider 1" key={key(0, "slider1")} className={sliderClassName} />,
   <Image src={slider1_3} alt="Slider 3" key={key(2, "slider1")} className={sliderClassName} />,
-  <Image src={slider1_4} alt="Slider 4" key={key(3, "slider1")} className={sliderClassName} />,
+  <Image src={manzara} alt="Slider 4" key={key(3, "slider1")} className={sliderClassName} />,
 ]
 
 const slider_images_2 = [
@@ -66,38 +62,38 @@ const slider_images_2 = [
   <Image src={slider2_4} alt="Slider 4" key={key(3, "slider2")} className={sliderClassName} />,
 ]
 
-const heroCarouselImages = [
-  <Image
-    src={hero_1}
-    alt="hero-1"
-    key="hero-1"
-    className={heroClassName}
-  />,
-  <Image
-    src={hero_2}
-    alt="hero-2"
-    key="hero-2"
-    className={heroClassName}
-  />,
-  <Image
-    src={hero_3}
-    alt="hero-3"
-    key="hero-3"
-    className={heroClassName}
-  />,
-  <Image
-    src={hero_4}
-    alt="hero-4"
-    key="hero-4"
-    className={heroClassName}
-  />,
-  <Image
-    src={hero_5}
-    alt="herro-5"
-    key="hero-5"
-    className={heroClassName}
-  />,
-]
+// const heroCarouselImages = [
+//   <Image
+//     src={hero_1}
+//     alt="hero-1"
+//     key="hero-1"
+//     className={heroClassName}
+//   />,
+//   <Image
+//     src={hero_2}
+//     alt="hero-2"
+//     key="hero-2"
+//     className={heroClassName}
+//   />,
+//   <Image
+//     src={hero_3}
+//     alt="hero-3"
+//     key="hero-3"
+//     className={heroClassName}
+//   />,
+//   <Image
+//     src={hero_4}
+//     alt="hero-4"
+//     key="hero-4"
+//     className={heroClassName}
+//   />,
+//   <Image
+//     src={hero_5}
+//     alt="herro-5"
+//     key="hero-5"
+//     className={heroClassName}
+//   />,
+// ]
 
 const slider1Sources = [
   { src: slider1_2, alt: "slider-1-2", variant: "normal" as const },
@@ -113,13 +109,13 @@ const slider2Sources = [
   { src: slider2_4, alt: "slider-2-4", variant: "normal" as const },
 ]
 
-const heroCarouselSources = [
-  { src: hero_1, alt: "Hero Image", variant: "normal" as const },
-  { src: hero_2, alt: "Hero Banner", variant: "normal" as const },
-  { src: hero_3, alt: "Bird's Eye View", variant: "normal" as const },
-  { src: hero_4, alt: "Bird's Eye View 2", variant: "normal" as const },
-  { src: hero_5, alt: "Bird's Eye View 2", variant: "normal" as const },
-]
+// const heroCarouselSources = [
+//   { src: hero_1, alt: "Hero Image", variant: "normal" as const },
+//   { src: hero_2, alt: "Hero Banner", variant: "normal" as const },
+//   { src: hero_3, alt: "Bird's Eye View", variant: "normal" as const },
+//   { src: hero_4, alt: "Bird's Eye View 2", variant: "normal" as const },
+//   { src: hero_5, alt: "Bird's Eye View 2", variant: "normal" as const },
+// ]
 
 const photoGridImages = [
   { src: gallery_1, alt: "Hebil_Blue_Gallery_1", variant: 'normal' as const },
@@ -214,7 +210,12 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
       <div className="w-full bg-white" style={{ WebkitTransform: 'translateZ(0)' }}>
         <div className="w-full " id="hebilblue" >
             <div className="overflow-hidden">
-            <Carousel onClick={(idx: number) => onClick(idx, heroCarouselSources)} slides={heroCarouselImages} height="h-[300px] md:h-[600px]" />
+            <Image
+              src={hero_1}
+              alt="hero-1"
+              key="hero-1"
+              className={heroClassName}
+            />
             </div>
           <HeroSection>
             <h1 lang={params.lang} className={textStyles.heroTitle}>{t('hero.title')}</h1>
@@ -228,7 +229,7 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
           >
             <Image src={otelNew} alt="BANNER_HOTEL" className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-110" />
           </button>
-          <HeroSection id="proje">
+          <HeroSection >
             <div>
               <p lang={params.lang} className={`${textStyles.heroDescription}`}>{t('banner.description_first_line')}</p>
               <p lang={params.lang} className={`${textStyles.heroDescription}`}>{t('banner.description_second_line')}</p>
@@ -257,7 +258,7 @@ export default function HomeClient({ params }: { params: { lang: string } }) {
                 {t('zamansiz_mimari_description')}
               </p>
             </CarouselSection>
-            <div className="flex flex-col-reverse md:flex-col gap-4 md:gap-0" id="vaziyet-plani">
+            <div className="flex flex-col-reverse md:flex-col gap-4 md:gap-0" id="proje">
               <div className="p-0 md:p-[24px] flex flex-wrap flex-row md:flex-row gap-[24px] w-full bg-white">
                 <StatItem lang={params.lang} title={t('stats.modern_buildings')} value={80} suffix={t('stats.units')} />
                 <StatItem lang={params.lang} title={t('stats.project_area')} value={30000} suffix={t('stats.square_meters')} />
