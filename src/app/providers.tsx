@@ -4,6 +4,7 @@
 // Import necessary modules and functions from external libraries and our own project
 import { Libraries, useJsApiLoader } from '@react-google-maps/api';
 import { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 import { SelectedItemProvider } from './context/SelectedItemContext';
 import './i18n';
 
@@ -12,12 +13,19 @@ const libraries = ['places', 'drawing', 'geometry'];
 
 // Define a function component called MapProvider that takes a children prop
 export function Providers({ children }: { children: ReactNode }) {
+  const { i18n } = useTranslation();
 
   // Load the Google Maps JavaScript API asynchronously
   const { isLoaded: scriptLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_API as string,
     libraries: libraries as Libraries,
+    language: i18n.language,
   });
+
+  console.log('i18n.language', i18n.language);
+  console.log('process.env.NEXT_PUBLIC_GOOGLE_MAP_API', process.env.NEXT_PUBLIC_GOOGLE_MAP_API);
+  console.log('isLoaded', scriptLoaded);
+  console.log('loadError', loadError);
 
   if(loadError) return <p>Encountered error while loading google maps</p>
 
