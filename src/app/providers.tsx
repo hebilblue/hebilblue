@@ -15,17 +15,15 @@ const libraries = ['places', 'drawing', 'geometry'];
 export function Providers({ children }: { children: ReactNode }) {
   const { i18n } = useTranslation();
 
+  // Extract base language code (e.g., 'tr' from 'tr-TR')
+  const baseLanguage = i18n.language.split('-')[0];
+
   // Load the Google Maps JavaScript API asynchronously
   const { isLoaded: scriptLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_API as string,
     libraries: libraries as Libraries,
-    language: i18n.language,
+    language: baseLanguage,
   });
-
-  console.log('i18n.language', i18n.language);
-  console.log('process.env.NEXT_PUBLIC_GOOGLE_MAP_API', process.env.NEXT_PUBLIC_GOOGLE_MAP_API);
-  console.log('isLoaded', scriptLoaded);
-  console.log('loadError', loadError);
 
   if(loadError) return <p>Encountered error while loading google maps</p>
 
